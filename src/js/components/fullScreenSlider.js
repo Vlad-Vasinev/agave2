@@ -188,3 +188,5 @@ export default class fsSlider {
     this.slides = [];
   }
 }
+
+console.log('test console')
