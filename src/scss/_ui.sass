@@ -1,0 +1,351 @@
+
+
+
+body
+  color: $baseTextColor
+  font-weight: 400
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+div,
+span
+  color: inherit
+  font-family: $baseFont
+  font-weight: inherit
+  margin: 0
+  transition: color 0.2s linear
+
+div, span
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p
+    display: block
+
+h1, .h1
+  // font-weight: inherit
+  font-weight: 600
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 50)
+  +aProp(line-height, 56)
+  +r($sm1)
+    // font-weight: 400
+    font-size: 26px
+    line-height: 32px
+
+h2, .h2
+
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 40)
+  +aProp(line-height, 50)
+  +r($sm1)
+    font-size: 24px
+    line-height: 30px
+
+h3, .h3
+  font-weight: 600
+  font-weight: inherit
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 26)
+  +aProp(line-height, 32)
+  +r($sm1)
+
+    font-size: 20px
+    line-height: 24px
+
+h4, .h4
+
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 24)
+  +aProp(line-height, 32)
+  +r($sm1)
+
+    font-size: 16px
+    line-height: 22px
+
+h5, .h5
+
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 18)
+  +aProp(line-height, 24)
+  +r($sm1)
+
+    font-size: 16px
+    line-height: 22px
+
+h6, .h6, p
+
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 16)
+  +aProp(line-height, 20)
+  +r($sm1)
+    font-size: 12px
+    line-height: 16px
+
+p, li, div
+  @extend .h5
+
+.buttonM
+  font-weight: 600
+  +aProp(font-size, 18)
+  +aProp(line-height, 24)
+  +r($sm)
+    font-size: 16px
+    line-height: 24px
+
+.buttonS
+  font-weight: 600
+  +aProp(font-size, 16)
+  +aProp(line-height, 20)
+  letter-spacing: 0em
+  +r($sm)
+    font-size: 13px
+    line-height: 18px
+
+button, .button,  .button_medium
+  @extend .buttonM
+  background: $LightGreen
+  color: #fff
+  font-weight: 600
+  +aPadd(20, 32)
+  +aProp(border-radius, 12)
+  min-width: max-content
+  width: max-content
+  flex-shrink: 0
+  display: block
+  +r($sm)
+    padding: 14px 32px
+    border-radius: 12px
+  &:active
+    transform: scale(.97)
+  &.button_grey
+    color: $baseTextColor
+    background-color: $ColdStone
+
+
+.button_small
+  @extend .button_medium
+  @extend .buttonS
+  +aPadd(16, 24)
+  +r($sm)
+    padding: 10px 24px
+
+
+.cls-btn-rotate
+  +rmin($sm1)
+    svg
+      transition: transform 0.3s 
+    &:hover
+      svg
+        transform: rotate(90deg)
+.cls-btn-rotate-svg
+  +rmin($sm1)
+    transition: transform 0.3s 
+    &:hover
+      transform: rotate(90deg)
+// .switch
+//   position: relative
+//   padding: 24px
+//   border-radius: 12px
+//   background-color: #FFFFFF
+//   border: 1px solid #EBEBEB
+//   cursor: pointer
+//   transition: background-color 0.2s, border 0.2s
+//   +r($sm)
+//     padding: 16px
+//   .program-filter-switch__type
+//   .program-filter-switch__name
+//     margin-bottom: 24px
+//   .program-filter-switch__count
+//     span
+//       color: #202020
+//       opacity: 0.6
+//   .program-filter-switch__checkbox
+//     width: 24px
+//     height: 24px
+//     position: absolute
+//     top: 24px
+//     right: 24px
+//     +r($sm)
+//       top: 16px
+//       right: 16px
+//     circle[fill='#EBEBEB']
+
+//     circle[fill='white']
+//       visibility: hidden
+//       transform-origin: center
+//       transition: visibility 0s 0.31s, transform 0.3s 0s
+//       transform: scale(0.1)
+//   &:hover
+//     border: 1px solid #BE48B4
+//   &.active
+//     border: 1px solid #BE48B4
+//     background-color: #FAE9F8
+//     .program-filter-switch__checkbox
+//       circle[fill='#EBEBEB']
+//         fill: #BE48B4
+//       circle[fill='white']
+//         transition: visibility 0s 0s, transform 0.3s 0.01s
+//         transform: scale(1)
+//         visibility: visible
+
+// Выбор филиала 
+
+.program-filter-switch__item
+  position: relative
+  padding: 24px
+  border-radius: 12px
+  background-color: #FFFFFF
+  border: 1px solid #EBEBEB
+  cursor: pointer
+  transition: background-color 0.2s, border 0.2s
+  +r($sm)
+    padding: 16px
+  .program-filter-switch__type
+  .program-filter-switch__name
+    margin-bottom: 24px
+  .program-filter-switch__count
+    span
+      color: #202020
+      opacity: 0.6
+  .program-filter-switch__checkbox
+    width: 24px
+    height: 24px
+    position: absolute
+    top: 24px
+    right: 24px
+    +r($sm)
+      top: 16px
+      right: 16px
+    circle[fill='#EBEBEB']
+
+    circle[fill='white']
+      visibility: hidden
+      transform-origin: center
+      transition: visibility 0s 0.31s, transform 0.3s 0s
+      transform: scale(0.1)
+  &:hover
+    border: 1px solid #BE48B4
+  &.active
+    border: 1px solid #BE48B4
+    background-color: #FAE9F8
+    .program-filter-switch__checkbox
+      circle[fill='#EBEBEB']
+        fill: #BE48B4
+      circle[fill='white']
+        transition: visibility 0s 0s, transform 0.3s 0.01s
+        transform: scale(1)
+        visibility: visible
+
+// Выбор подкатегории
+
+
+.toggle-tag
+  @extend .h6
+  +aProp(border-radius, 8)
+  padding: aCalc(8) aCalc(16) aCalc(10)
+  color: #202020
+
+  width: max-content
+  white-space: nowrap
+  background-color: $WhiteGray
+  // vertical-align: center
+  align-items: center
+  display: flex
+  cursor: pointer
+  +no-select
+  +r($sm)
+    border-radius: 8px
+    padding: 12px 12px
+  &.toggle-tag_active 
+    background-color: $LightGreen
+    +aProp(padding-top, 6)
+    +aProp(padding-bottom, 8)
+    color: #fff
+    +r($sm)
+      padding: 8px 12px
+  &.toggle-tag_active, 
+  &.slide-button.toggle-tag_active .slide-button-inner > span,
+  &.slide-button.toggle-tag_active > span:only-child
+    
+    &:after
+      content: ''
+      display: block
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-width='1.5' d='M6 18 18 6M6 6l12 12' /%3E%3C/svg%3E")
+      mask-size: 100%
+      background-color: #fff
+      +aProp(height, 24)
+      width: auto
+      aspect-ratio: 1
+      font-size: inherit
+      line-height: inherit
+      background-size: 100%
+      +r($sm)
+        height: 24px
+
+
+
+.radio
+  +aProp(width, 24)
+  +aProp(height, 24)
+  aspect-ratio: 1
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: $WhiteGray
+  position: relative
+  cursor: pointer
+  +aProp(border-radius, 4)
+  +r($sm)
+    border-radius: 4px
+    width: 24px
+    height: 24px
+
+  input
+    opacity: 0
+  &.active-box
+    background-color: $LightGreen
+    &::after
+      content: ''
+      position: absolute
+      +aProp(width, 16)
+      +aProp(height, 16)
+      // background: #202020
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-width='1.5' d='m2 8.63 4 4.7 8-10'/%3E%3C/svg%3E")
+      border-radius: 100%
+      +aProp(top, 4)
+      +aProp(left, 4)
+      +r($sm)
+        left: 4px
+        top: 4px
+        width: 16px
+        height: 16px
+  &.disabled
+    touch-action: none
+    h6
+      color: #9a9a9a
+    .radio
+      &.active-box
+        &::after
+          background: #9a9a9a
+        
+
+@import "inputs"
+@import "slideButton"
+@import "shinyBtn"
+@import "mixins/gradient-safari-mixin"

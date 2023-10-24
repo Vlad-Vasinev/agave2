@@ -1,0 +1,121 @@
+div
+  // Список страниц, !!! УДАЛИТЬ В ПРОД !!!
+  // Чтобы увидеть список страниц - щелкнуть в левом нижнем углу
+  style.
+    .pl {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+    }
+    .pl .pl__trigger {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      bottom: 0;
+      left: 0;
+    }
+    .pl .pl__ctr {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      background-color: #fff;
+      display: none;
+    }
+    .pl._v .pl__ctr {
+      display: block;
+    }
+    .pl a {
+      display: block;
+      padding: 4px 8px;
+    }
+  .pl(title='список страниц')
+    .pl__trigger
+    .pl__ctr
+
+
+      a(href='index.html')
+        | Главная 
+        b 
+          small (index-page)
+      a(href='catalog.html')
+        | Каталог 
+        b 
+          small (catalog-page)
+      a(href='product.html')
+        | Продукт 
+        b 
+          small (product-page)
+      //- a(href='homepage.html')
+        | Главная 
+        b 
+          small (homepage)
+      //- a(href='index.html')
+      //-   | Главная 
+      //-   b 
+      //-     small (index)
+      //- a(href='info-page.html')
+      //-   | Страница-шаблон 
+      //-   b 
+      //-     small (info-page)
+      //- a(href='ipoteka-page.html')
+      //-   | Ипотека 
+      //-   b 
+      //-     small (ipoteka-page)
+      //- a(href='news-page.html')
+      //-   | Новости 
+      //-   b 
+      //-     small (news-page)
+      //- a(href='sections-page.html')
+      //-   | Разделы Каталога 
+      //-   b 
+      //-     small (sections-page)
+      //- a(href='policy.html')
+      //-   | Политика К 
+      //-   b 
+      //-     small (policy)
+      //- a(href='404.html')
+      //-   | 404
+      //-   b 
+      //-     small (404)
+      //- a(href='thanks.html')
+      //-   | thanks
+      //-   b 
+      //-     small (thanks)
+      //- a(href='about.html')
+      //-   | about
+      //-   b 
+      //-     small (about)
+      //- a(href='partners.html')
+      //-   | partners
+      //-   b 
+      //-     small (partners)
+  script.
+    (() => {
+    const pl = document.querySelector(".pl");
+    if (!pl) { return }
+    pl.querySelector('.pl__trigger').addEventListener('click', (e) => {
+      pl.classList.toggle('_v');
+    })
+    })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

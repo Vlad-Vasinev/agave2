@@ -1,0 +1,134 @@
+.fullscreen-slider
+  template#slide-tpl
+    .swiper-slide.fullscreen-slider__slide()
+      .swiper-zoom-container(js-lazy)
+        img()
+  .fullscreen-slider__close(fs-close)
+    svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+      path(fill='#fff' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+      path(fill='#fff' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+  .fullscreen-slider__slider.swiper-container
+    .fullscreen-slider__wrapper.swiper-wrapper 
+  .slider-pagination-navigation
+    button.slider-navigation-prev.slide-button.slide-button_horizontal
+      span 
+        <svg width="58" height="37" viewBox="0 0 58 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M58 18.5L2 18.5M2 18.5L19.5 1M2 18.5L19.5 36" stroke="black" stroke-width="1.5"/>
+        </svg>
+    .swiper-pagination
+    button.slider-navigation-next.slide-button.slide-button_horizontal
+      span 
+        <svg width="58" height="37" viewBox="0 0 58 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M58 18.5L2 18.5M2 18.5L19.5 1M2 18.5L19.5 36" stroke="black" stroke-width="1.5"/>
+        </svg>
+  .swiper.gallery-thumbs
+    ul.gallery-thumbs__content.swiper-wrapper 
+      li.gallery-thumbs__el.swiper-slide
+        img.lazy(data-src="img/product-0.png" alt="Agave image 0")
+      li.gallery-thumbs__el.swiper-slide
+        img.lazy(data-src="img/product-1.png" alt="Agave image 1")
+      li.gallery-thumbs__el.swiper-slide
+        img.lazy(data-src="img/product-2.png" alt="Agave image 2")
+      li.gallery-thumbs__el.swiper-slide
+        img.lazy(data-src="img/product-3.png" alt="Agave image 3")
+      li.gallery-thumbs__el.swiper-slide
+        img.lazy(data-src="img/product-4.png" alt="Agave image 4")
+      li.gallery-thumbs__el.swiper-slide
+        img.lazy(data-src="img/product-5.png" alt="Agave image 5")
+//- .modal(data-modal-name="form-modal")
+//-   .modal__inner
+//-     .modal__top
+//-       span.h2.form-request Обсудить проект
+//-       span.h2.form-response Спасибо за вашу заявку
+//-       span.h5 Если у вас вопрос по уже купленной недвижимости, напишите нам в чат
+//-       .modal__close-button(js-modal-close)
+//-         svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+//-           path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+//-           path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+//-     .modal__body
+//-       form#form-modal.form-request(action="/local/ajax/forms.php" data-redirect='/thanks.html')
+//-         .ui-input(js-input-focus)
+//-           label.ui-input__float-label(for="form-modal-name-p") Ваше имя
+//-           input(type="text" name="name" id="form-modal-name-p" required)  
+//-         .ui-input(js-input-focus)
+//-           label.ui-input__float-label(for="form-modal-phoneNumber")  Ваш телефон:
+//-           input(type="tel" name="phoneNumber" id="form-modal-phoneNumber")
+        
+//-         <div class="g-recaptcha" id="recaptcha1" data-sitekey="6LdA9JseAAAAADFzWcsSaXOVX5YkFaM5Qb0hyjMb" data-size="invisible"></div>
+//-         button.fill-button(type="submit") Отправить
+//-         p.h6.form-policy Нажимая на кнпоку вы соглашаетесь с условиями <a>политики конфиденциальности</a> и <a>обработки персональных данных</a>
+//-       .form-response Спасибо за вашу заявку. Мы изучим все данные и с вами свяжемся. 
+
+//- .modal.modal_with-form(data-modal-name="sale-modal")
+//-   .modal__inner
+//-     .modal__top
+//-       span.h2.form-request Обсудить проект
+//-       span.h2.form-response Спасибо за вашу заявку
+//-       span.h5 Если у вас вопрос по уже купленной недвижимости, напишите нам в чат
+//-       .modal__close-button(js-modal-close)
+//-         svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+//-           path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+//-           path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+//-     .modal__body
+//-       form#sale-modal.form-request(action="/local/ajax/forms.php")
+//-         input.visually-hidden(type='text' name='sale-id' value='0')
+//-         .ui-input(js-input-focus)
+//-           label.ui-input__float-label(for="action-modal-name-p") Ваше имя
+//-           input(type="text" name="name" id="sale-modal-name-p" required)  
+//-         .ui-input(js-input-focus)
+//-           label.ui-input__float-label(for="sale-modal-phoneNumber")  Ваш телефон:
+//-           input(type="tel" name="phoneNumber" id="sale-modal-phoneNumber")
+        
+//-         <div class="g-recaptcha" id="recaptcha2" data-sitekey="  LdA9JseAAAAADFzWcsSaXOVX5YkFaM5Qb0hyjMb" data-size="invisible"></div>
+//-         button.fill-button(type="submit") Отправить
+//-         p.h6.form-policy Нажимая на кнпоку вы соглашаетесь с условиями <a>политики конфиденциальности</a> и <a>обработки персональных данных</a>
+//-       .form-response 
+//-         button.fill-button(js-modal-close) Закрыть
+
+//- // Модальные окна для страницы аукциона
+//- .modal.modal_with-form(data-modal-name="auction-bet-modal")
+//-   .modal__inner
+//-     .modal__top
+//-       span.h2.form-request Сделать ставку
+//-       span.h2.form-response Спасибо за вашу заявку
+//-       span.h5 Оставьте ваши данные и наш менеджер <br/>с вами свяжется
+//-       .modal__close-button(js-modal-close)
+//-         svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+//-           path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+//-           path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+//-     .modal__body
+//-       form#auction-bet-modal.form-request(action="/local/ajax/forms.php")
+//-         input.display-none(type='text' name='project-id' value='0')
+//-         .ui-input(js-input-focus)
+//-           label.ui-input__float-label(for="auction-bet-modal-name-p") Ваше имя
+//-           input(type="text" name="name" id="auction-bet-modal-name-p" required)  
+//-         .ui-input(js-input-focus)
+//-           label.ui-input__float-label(for="auction-bet-modal-phoneNumber")  Ваш телефон:
+//-           input(type="tel" name="phoneNumber" id="auction-bet-modal-phoneNumber")
+//-         <div class="g-recaptcha" id="recaptcha3" data-sitekey="6LcCmRgnAAAAAH_ruytbtP_CauNbi3y574reslAW" data-size="invisible"></div>
+//-         button.fill-button(type="submit") Отправить
+//-         p.h6.form-policy Нажимая на кнпоку вы соглашаетесь с условиями <a>политики конфиденциальности</a> и <a>обработки персональных данных</a>
+//-       .form-response Спасибо за вашу заявку. Мы изучим все данные и с вами свяжемся. 
+
+//- .modal(data-modal-name="what-included-modal")
+//-   .modal__inner
+//-     .modal__top
+//-       span.h2 Что входит в стоимость
+//-       .modal__close-button(js-modal-close)
+//-         svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+//-           path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+//-           path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+//-     .modal__body
+//-       include ./_what-included
+
+//- template#modal-template
+//-   .modal
+//-     .modal__inner
+//-       .modal__top
+//-         span 
+//-         .modal__close-button(js-modal-close)
+//-           svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+//-             path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+//-             path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+//-       .modal__body
+//- .modal-background.fixed-block(js-modal-close)

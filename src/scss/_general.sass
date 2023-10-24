@@ -1,0 +1,196 @@
+html
+  box-sizing: border-box
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+  outline: none
+
+html
+  height: 100%
+  height: -webkit-fill-available
+
+:root
+  --swiper-theme-color: unset
+  color: #000
+
+body,
+html
+  background-color: #fff
+  font-family: $baseFont
+
+  font-size: 16px
+  min-width: 320px
+  max-width: 100%
+  
+  margin: 0
+
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+body
+  min-height: 100vh
+  min-height: -webkit-fill-available
+
+// МАССИВ z-index-ов 
+$zindex: ( "modal": 200, "overlay": 190, "dropdown": 110, "header": 100, "footer": 90 )
+a[href] object
+  cursor: pointer
+  svg
+    cursor: pointer
+
+.page
+  min-height: calc(100vh - var(--header-height))
+  
+  width: 100%
+  font-family: $baseFont
+  -webkit-text-size-adjust: 100%
+  display: flex
+  flex-direction: column
+  // min-height: 100vh;
+  //overflow: hidden
+  transition: transform 0.4s ease-in-out
+  //margin-top .3s ease-in-out,;
+  position: relative
+  +r($sm)
+    min-height: calc(100vh - var(--header-height) - var(--mobile-logo-height) )
+
+.page__body
+  margin: 0
+  min-width: 320px
+  min-height: 100%
+  font-size: 16px
+
+img
+  height: auto
+  max-width: 100%
+  object-fit: cover
+  display: block
+
+svg
+  display: block
+  // [fill] 
+  //   transition: fill 0.3s
+
+a
+  text-decoration: none
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+  li
+    margin: 0
+    display: block
+.is-hidden
+  display: none !important
+
+.btn-reset
+  border: none
+  padding: 0
+  background-color: transparent
+  cursor: pointer
+
+.list-reset
+  list-style: none
+  margin: 0
+  padding: 0
+
+button
+  padding: 0
+  border: none
+  font: inherit
+  color: inherit
+  background-color: transparent
+  cursor: pointer
+
+input
+  -webkit-appearance: none
+  appearance: none
+  border: none
+  border-radius: 0
+  background-color: #fff
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration
+    display: none
+
+textarea
+  border: none
+  overflow: auto
+  outline: none
+
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+
+  resize: none
+
+.visually-hidden
+  position: absolute
+  overflow: hidden
+  margin: -1px
+  border: 0
+  padding: 0
+  width: 1px
+  height: 1px
+  clip: rect(0 0 0 0)
+
+.display-none
+  display: none !important
+
+.loading-icon-bg
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='20' fill='none' stroke='%232E5E5E' stroke-dasharray='31.41592653589793 31.41592653589793' stroke-linecap='round' stroke-width='2'%3E%3CanimateTransform attributeName='transform' dur='2.8571428571428568s' keyTimes='0;1' repeatCount='indefinite' type='rotate' values='0 50 50;360 50 50' /%3E%3C/circle%3E%3C/svg%3E")
+  background-repeat: no-repeat
+  background-size: 10%
+  background-position: center
+
+.container
+  margin: 0 auto
+  padding: 0 var(--container-offset)
+  max-width: var(--container-width)
+
+.js-focus-visible :focus:not(.focus-visible)
+  outline: none
+
+._mob
+  +rmin($sm1)
+    display: none !important
+._dsk
+  +r($sm)
+    display: none !important
+
+br.mob-br, br[mob-br]
+  +rmin($sm1)
+    display: none
+
+br.dsk-br, br[dsk-br]
+  +r($sm)
+    display: none
+
+.centered
+  text-align: center
+
+.dis-scroll
+  position: fixed
+  left: 0
+  top: 0
+  overflow: hidden
+  width: 100%
+  height: 100%
+  overscroll-behavior: none
+
+  .page--ios &
+    position: relative
+
+.answers
+  z-index: 1 !important
+
+#captcha ~ div[style*="transition: visibility 0s"] > div:not([style*="width: 100%;"])
+  position: fixed !important
+  +r($sm)
+    top: 0 !important
+  +rmin($sm1)
+    top: 25vh !important

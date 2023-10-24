@@ -1,0 +1,681 @@
+
+.header
+  max-width: aCalc(1920)
+  margin: 0 auto
+  padding: 0 aCalc(80)
+  position: relative
+  +r($sm)
+    display: none
+
+.header-active
+  position: fixed
+  z-index: 250
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  width: 100vw
+  animation-name: height-animate
+  animation-duration: 0.9s
+  -o-animation-fill-mode: forwards
+  height: 100vh
+  background-color: gray
+  background-color: rgba(128, 128, 128, 0.5)
+
+@keyframes height-animate
+  0%
+    background-color: transparent
+  100%
+    background-color: rgba(128, 128, 128, 0.5)
+
+.header__inner
+
+.header__menu
+  display: flex
+  padding: aCalc(16) aCalc(24) aCalc(14) aCalc(24)
+  justify-content: center
+  align-items: flex-start
+  position: fixed
+  top: 0
+  z-index: 200
+  left: 0
+  right: 0
+  max-width: aCalc(900)
+  margin: 0 auto
+  border-top-left-radius: aCalc(40)
+  border-top-right-radius: aCalc(40)
+  margin-top: aCalc(16) 
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    width: 100%
+    border-top-left-radius: aCalc(40)
+    border-top-right-radius: aCalc(40) 
+    border-bottom-right-radius: aCalc(40)
+    border-bottom-left-radius: aCalc(40)
+    height: calc(100% + var(--infoElHeight))
+    transition: height 0.25s, min-height 0.3s
+    transition: all .4s
+
+.header__info-link
+
+.header__el:not(.header__el-logo)
+  color: #000000
+  font-size: aCalc(16)
+  font-style: normal
+  font-weight: 600
+  line-height: aCalc(22)
+  text-transform: uppercase
+  border-radius: aCalc(32)
+  padding: aCalc(14) aCalc(24)
+  border: 1px solid rgba(0, 0, 0, 0.08)
+  background-color: rgba(255, 255, 255, 0.60)
+  backdrop-filter: blur(4px)
+  cursor: pointer
+  transition-duration: .4s
+  &:hover
+    border: 1px solid #006837
+  
+.header__el:not(.header__el-logo)
+  margin-right: aCalc(6)
+
+.header__el-logo
+  position: relative
+  z-index: 250
+  margin: 0 aCalc(38)
+
+.header__el.header__el-animate
+  padding-left: aCalc(58)
+  position: relative
+  .animate-symbols
+    transform: rotate(90deg)
+    left: aCalc(24)
+    position: absolute
+    display: grid
+    justify-content: center
+    align-items: center 
+    width: aCalc(24)
+    height: aCalc(24)
+    .animate-symbols__first, .animate-symbols__last
+      transition: all .3s
+    &__el
+      border-radius: aCalc(3)
+      width: aCalc(6)
+      height: aCalc(6)
+      transition: all .3s
+      background-color: #000000
+  &:hover
+    .animate-symbols
+      .animate-symbols__first
+        position: relative
+        transform: translateY(100%) translateX(100%)
+      .animate-symbols__last
+        position: relative
+        transform: translateY(-100%) translateX(-100%)
+
+.header__info
+  max-width: aCalc(900)
+  width: 100%
+  position: fixed
+  z-index: 200
+  margin: 0 auto
+  top: aCalc(140)
+  left: 0
+  right: 0
+  visibility: hidden
+
+.header__info-el
+  text-align: center
+  padding: aCalc(24)
+  max-width: aCalc(900)
+  width: 100%
+  visibility: hidden
+  opacity: 0
+  position: absolute
+  z-index: 350
+
+@keyframes visibility-animation
+  0%
+    height: 0
+    opacity: 0
+    visibility: hidden
+  100%
+    height: auto
+    opacity: 1
+    visibility: visible
+
+@keyframes visibility-animate
+  0%
+    height: 0
+  100%
+    height: auto
+
+.header__menu.header-menu_active
+  &::before
+    background-color: #ffffff
+
+.header__info_active
+  visibility: visible
+
+.header__info-el_active
+  animation-fill-mode: forwards
+  animation-name: visibility-animation
+  animation-delay: 0.25s
+  animation-duration: 0.4s
+
+.header__info-link
+  font-size: aCalc(32)
+  font-style: normal
+  font-weight: 400
+  line-height: aCalc(40)
+  max-width: max-content
+  margin: 0 auto
+
+.header__info-el.header__info-shop
+  display: flex
+  justify-content: center
+  .header__info-link:last-child
+    margin-left: aCalc(10)
+  .header__info-link
+    margin-top: 0
+    position: relative
+    max-width: aCalc(357)
+    min-height: aCalc(146)
+    height: 100%
+    border-radius: aCalc(24)
+    padding: aCalc(24)
+    background-color: #F9F9F9
+    width: 100%
+    div
+      text-align: left
+      height: aCalc(32)
+      font-size: aCalc(24)
+      font-style: normal
+      font-weight: 400
+      line-height: aCalc(34)
+    img
+      max-width: aCalc(64)
+      width: 100%
+      height: aCalc(64)
+      margin-left: auto
+
+
+.header__info-link + .header__info-link
+  padding-top: aCalc(6)
+
+.header__info-el.header__info-map
+  display: flex
+  justify-content: center
+  align-items: top
+
+.map-container
+  margin-right: aCalc(24)
+  div
+    border-radius: aCalc(24)
+    max-width: aCalc(362)
+    width: 100%
+    height: aCalc(300)
+
+.address
+  &__el + &__el
+    margin-top: aCalc(24)
+  &__el-title
+    text-align: left
+    font-size: aCalc(24)
+    font-style: normal
+    font-weight: 400
+    line-height: aCalc(34)
+
+.address__el-subtitle
+  text-align: left
+  display: block
+  font-size: aCalc(12)
+  font-style: normal
+  font-weight: 400
+  line-height: aCalc(16)
+  text-transform: uppercase
+  margin-bottom: aCalc(2)
+
+// .header__info
+//   display: flex
+//   justify-content: space-between
+//   max-width: aCalc(572)
+//   width: 100%
+
+// .header__info-links
+//   max-width: aCalc(204)
+//   width: 100%
+
+// .menu__link-text
+//   color: #0E0E0E
+//   text-align: center
+//   font-size: aCalc(12)
+//   font-style: normal
+//   line-height: aCalc(16)
+//   text-transform: uppercase
+
+// .header__info-links
+//   display: flex
+//   justify-content: space-between
+
+.buttonM
+  font-weight: 600
+  +aProp(font-size, 18)
+  +aProp(line-height, 24)
+  +r($sm)
+    font-size: 16px
+    line-height: 24px
+
+.buttonS
+  font-weight: 600
+  +aProp(font-size, 16)
+  +aProp(line-height, 20)
+  letter-spacing: 0em
+  +r($sm)
+    font-size: 13px
+    line-height: 18px
+
+// .enlarge-link::before
+//   content: ''
+//   position: absolute
+//   display: block
+//   top: -15px
+//   bottom: -15px
+//   right: -15px
+//   left: -15px
+
+.enlarge-link
+  position: relative
+
+.slide-button
+  cursor: pointer
+  .slide-button-inner
+    text-transform: uppercase
+    color: #0E0E0E
+    font-size: aCalc(16)
+    font-style: normal
+    line-height: normal
+    text-transform: uppercase
+    position: relative
+    overflow: hidden
+    & > span
+      transform: translateY(0)
+      transition: transform 0.4s 0.05s, color 0.2s linear, background-color 0.2s linear
+      &:nth-child(1)
+        position: static
+      &:nth-child(2)
+        position: absolute
+        width: 100%
+  &:hover
+    +rmin($sm1)
+      .slide-button-inner
+        & > span
+          color: #006837
+          transform: translateY(-100%)
+          &:nth-child(2)
+            position: absolute
+  &.slide-button_horizontal
+    .slide-button-inner
+      & > span
+        transform: translateX(0)
+        transition: transform 0.4s 0.05s, color 0.3s
+        &:nth-child(2)
+          top: 0
+          left: 100%
+    &:hover
+      +rmin($sm1)
+        .slide-button-inner
+          & > span
+            transform: translateX(-100%)
+
+button.slide-button
+  padding: 0
+  color: unset
+  
+.button_medium.slide-button, .button_small.slide-button 
+  padding: 0
+  background-color: unset
+  overflow: hidden
+  @include gradient-safari-mixin
+  .slide-button-inner > span, > span:only-child
+    @extend .buttonM
+    display: block
+    padding: aCalc(20) aCalc(32)
+    color: #fff
+    text-align: center
+    +r($sm)
+      padding: 14px 32px
+      border-radius: 12px
+    &:nth-child(1)
+      background-color: $LightGreen
+    &:nth-child(2)
+      background-color: $Green
+    
+  
+
+.button_small.slide-button
+  .slide-button-inner > span, > span:only-child
+    @extend .buttonS
+    padding: aCalc(16) aCalc(24)
+    +r($sm)
+      padding: 10px 24px
+    
+
+.slide-button
+  &.slide-button_icon
+    .slide-button-inner > span, > span:only-child
+      display: flex
+      align-items: center
+      justify-content: center
+    svg
+      display: inline-block
+      width: auto
+      +aProp(margin-right, 16)
+      +aProp(height, 22)
+      +r($sm)
+        height: 20px
+        margin-right: 6px
+  &.slide-button_grey
+    .slide-button-inner > span, > span:only-child
+      color: #161616
+      &:nth-child(1)
+        background-color: $ColdStone
+      &:nth-child(2)
+        background-color: #B6B8C4
+  &.slide-button_biege
+    .slide-button-inner > span, > span:only-child
+      color: #161616
+      &:nth-child(1)
+        background-color: $Beige
+      &:nth-child(2)
+        background-color: $LightGreen
+        color: #fff
+  &.slide-button_white
+    .slide-button-inner > span, > span:only-child
+      color: $LightGreen
+      &:nth-child(1)
+        background-color: #fff
+      &:nth-child(2)
+        color: #fff
+
+.slide-button.slide-button_arrow
+  z-index: 2
+  bottom: 0
+  left: 0
+  overflow: hidden
+  border-radius: 50%
+  +aProp(width, 48)
+  height: auto
+  aspect-ratio: 1
+  background-color: $LightGreen
+  @include gradient-safari-mixin
+  +r($sm)
+    width: 48px
+  span
+    width: 100%
+    svg
+      width: 100%
+      height: auto
+    &:nth-of-type(1)
+      svg
+    &:nth-of-type(2)
+      svg
+        circle
+          fill: #fff
+        path
+          stroke: $LightGreen
+  &.slide-button_biege
+    background-color: $Beige !important
+    span
+      background-color: $Beige !important
+      &:nth-of-type(1)
+        svg
+          circle
+            fill: $Beige
+          path
+            stroke: #161616
+
+.toggle-tag.slide-button 
+  padding: 0
+  background-color: unset
+  overflow: hidden
+  @include gradient-safari-mixin
+  background-color: $WhiteGray
+  width: max-content
+  
+  +aProp(border-radius, 8)
+  +r($sm) 
+    border-radius: 8px
+  &.toggle-tag_active
+    &:after
+      display: none
+      background-image: none
+  &:active
+    transform: scale(.97)
+  .slide-button-inner > span, > span:only-child  
+    +aProp(border-radius, 8)
+    padding: aCalc(8) aCalc(16) aCalc(10)
+    color: #202020
+
+    width: max-content
+    white-space: nowrap
+    background-color: $WhiteGray
+    align-items: center
+    display: flex
+    cursor: pointer
+    +no-select
+    
+    +r($sm)
+      border-radius: 8px
+      padding: 12px 12px
+    &:nth-child(1)
+      background-color: $WhiteGray
+    &:nth-child(2)
+      background-color: $ColdStone
+  &:hover, &.toggle-tag_active
+    +rmin($sm1)
+      .slide-button-inner
+        & > span
+          transform: translateY(-100%)
+          &:nth-child(2)
+            position: absolute
+            
+  &.toggle-tag_active
+    .slide-button-inner > span:nth-child(2), > span:only-child
+      background-color: $LightGreen
+      color: #fff  
+      +r($sm)
+        padding: 8px 12px
+        color: #fff
+.toggle-tag.slide-button.toggle-tag_gray 
+  &.toggle-tag_active
+    .slide-button-inner > span:nth-child(2), > span:only-child
+      background-color: $ColdStone
+      color: $baseTextColor
+      &::after
+        background-color: $baseTextColor
+     
+.footer-menu__link.header__sale-button.slide-button_icon.slide-button.header__menu-item_mobile
+  span
+    display: block
+
+.menu__link-sublink.header__sale-button.slide-button_icon.slide-button.header__menu-item_mobile span
+  font-size: aCalc(12)
+
+.header-mobile
+  display: none
+  +r($sm)
+    display: block
+
+.mobile-menu
+  transform: translateX(-100%)
+  visibility: hidden
+  transition: visibility 0s 0.31s, transform 0.3s 0s, -webkit-transform 0.3s 0s
+  width: 100%
+  height: 100vh
+  top: 0
+  padding-top: 10px
+  background-color: #ffffff
+  position: fixed
+  min-height: 325px
+  z-index: 400
+  transiton: all .3s
+  .menu
+    display: grid
+    grid-template-columns: 111px 111px 111px
+    justify-content: center
+    gap: 5px
+    margin: 0 auto
+  .menu__el
+    width: 111px
+    height: 105px
+  .menu__link-img 
+    max-width: 40px
+    max-height: 44px
+    svg
+      width: 40px
+      height: 44px
+  .menu__link-sublink.header__sale-button.slide-button_icon.slide-button.header__menu-item_mobile span 
+    font-size: 12px
+    line-height: 16px
+    display: block
+    text-align: center
+    margin-top: 15px
+
+.mobile-menu_active
+  visibility: visible
+  transform: translateX(0)
+  transition: transform 0.4s, visibility 0s 0s, -webkit-transform 0.4s
+
+.mobile-menu__title 
+  margin-bottom: 16px
+  font-size: 22px
+  line-height: normal
+
+.mobile-logo__title
+  text-align: center
+  text-transform: uppercase
+
+.svg-main
+  position: relative
+  z-index: 200
+
+.logo .svg-main
+  +r($sm)
+    width: 54px
+    height: 54px
+
+//hide logo on mobile header
+.svg-text
+  visibility: visible
+  opacity: 1
+  transform: translateY(0)
+  transition: transform 0.4s 0.5s, opacity 0s 0.21s, visibility 0s 0s, -webkit-transform 0.4s
+
+.header-mobile__inner
+  display: none
+  justify-content: space-between
+  background-color: transparent
+  background-color:#ffffff
+  padding: 10px 16px
+  align-items: top
+  position: fixed
+  z-index: 200
+  // z-index: 300
+  top: 0
+  max-width: 736px
+  left: 0
+  right: 0
+  min-height: 112px
+  transition: min-height 0.35s
+  position: fixed
+  +r($sm)
+    display: flex
+    padding: 10px 8px
+
+.header-mobile__inner.header-mobile_active 
+  min-height: 68px
+  .svg-main
+    margin-bottom: 0
+  .svg-text
+    position: relative
+    z-index: 199
+    opacity: 0
+    transform: translateY(-100%)
+    visibility: hidden
+    transition: visibility 0s 0.31s, opacity 0s 0.10s, transform 0.3s 0s, -webkit-transform 0.3s 0s
+
+.svg-text, .svg-main
+  margin: 0 auto
+
+.svg-main
+  margin-bottom: 10px
+
+.header-mobile_active
+
+.logo__active
+  min-height: auto
+
+.mobile-menu__buttons
+  display: flex
+  justify-content: space-between
+  margin-bottom: 32px
+
+.mobile-menu__button
+  border-radius: 46px
+  width: 48px
+  height: 48px
+  display: grid
+  align-content: center
+  justify-content: center
+  svg
+    width: 24px
+    height: 24px
+
+.mobile-email.header-mobile__email svg
+  width: 80px
+  height: 40px
+
+.mobile-email.header-mobile__email
+  background-color: transparent
+
+.mobile-menu__button.close-btn
+
+
+.mobile-menu__button
+
+
+.header-mobile__close
+  display: none
+
+.burger
+  width: 55px
+  height: 40px
+  border-radius: 46px
+  background-color: transparent 
+  display: grid
+  justify-content: center
+  align-content: center
+
+.burger__el
+  height: 2px
+  background-color:#000000
+  border-radius: 2px
+  width: 20px
+
+.burger__el + .burger__el
+  margin-top: 5px
+  
+.mobile-email
+  width: 48px
+  height: 48px
+  display: grid
+  justify-content: center
+  align-items: center
+  border-radius: 46px
+  background-color: transparent
+  

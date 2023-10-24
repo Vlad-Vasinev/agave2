@@ -1,0 +1,23 @@
+.button_medium.slide-button, .button_small.slide-button 
+  padding: 0
+  background-color: #00532C
+  overflow: hidden
+  @include gradient-safari-mixin
+  .slide-button-inner > span, > span:only-child
+    @extend .buttonM
+    display: block
+    padding: aCalc(13) aCalc(33)
+    color: #fff
+    text-align: center
+    width: auto
+    +r($sm)
+      padding: 14px 32px
+      border-radius: 12px
+    &:nth-child(1)
+      background-color: $LightGreen
+    &:nth-child(2)
+      background-color: $Green
+
+.product__price-btn.button_medium.slide-button.slide-button_green span
+  text-transform: initial
+  font-size: aCalc(16)

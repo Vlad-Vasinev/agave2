@@ -1,0 +1,147 @@
+
+.footer
+  max-width: aCalc(1920)
+  margin: 0 auto
+  padding: 0 aCalc(80)
+  padding-bottom: aCalc(317)
+  +r($sm)
+    padding: 0 16px 40px 16px
+
+.footer__top
+  display: flex
+  justify-content: space-between
+  margin-bottom: aCalc(120)
+  +r($sm)
+    display: block
+    margin-bottom: 32px
+    .logo, .social
+      display: none
+
+.footer__top-inner
+  display: flex
+  justify-content: space-between
+  max-width: aCalc(540)
+  width: 100%
+  +r($sm)
+    max-width: 100%
+    display: block
+
+.footer__bottom
+  justify-content: space-between
+  display: flex
+  +r($sm)
+    flex-direction: column
+    justify-content: start
+
+.footer-menu
+  +r($sm)
+    min-width: 343px
+    width: 100%
+    display: flex 
+    flex-wrap: wrap
+
+.footer-menu__link
+  color: #000
+  font-size: aCalc(16)
+  font-style: normal
+  line-height: normal
+  text-transform: uppercase
+  padding: aCalc(3) 0
+  +r($sm)
+    margin-right: 12px
+    margin-block: 6px
+    font-size: 13px
+    line-height: normal
+    margin-right: 12px
+    margin-bottom: 6px
+    border-radius: 24px
+    padding: 6px 12px
+    background-color: #F9F9F9
+
+.slide-button.slide-button_icon .slide-button-inner>span, .slide-button.slide-button_icon>span:only-child
+  +r($sm)
+    font-size: 13px
+
+.footer-menu__link .slide-button-inner span
+  +r($sm)
+    font-size: 13px
+    line-height: normal
+    text-transform: uppercase
+
+.footer__bottom-inner
+  display: flex
+  justify-content: space-between
+  max-width: aCalc(540)
+  width: 100%
+  +r($sm)
+    max-width: initial
+    flex-direction: column
+    justify-content: start
+
+
+.copy-rights, .policy-rights, .author
+  color: #000
+  font-size: aCalc(16)
+  font-style: normal
+  line-height: aCalc(24)
+  +r($sm)
+    font-size: 11px
+    line-height: normal
+    margin-bottom: 8px
+    text-align: left
+
+.policy-rights.header__sale-button.slide-button_icon.slide-button.header__menu-item_mobile span
+  text-transform: initial
+  font-size: aCalc(16)
+  font-style: normal
+  line-height: aCalc(24)
+  +r($sm)
+    display: block
+    font-size: 11px
+    line-height: normal
+
+.author.header__sale-button.slide-button_icon.slide-button.header__menu-item_mobile span
+  text-transform: initial
+  font-size: aCalc(16)
+  font-style: normal
+  line-height: aCalc(24)
+  +r($sm)
+    display: block
+    font-size: 11px
+    line-height: normal
+
+.social__link
+  display: block
+  color: #000
+  font-size: aCalc(16)
+  font-style: normal
+  line-height: normal
+  text-transform: uppercase
+
+.social__media
+  margin-top: aCalc(24)
+
+.social__link-vkontakte
+  margin-left: aCalc(30)
+
+.social__link-last
+  padding-top: aCalc(6)
+
+.social__link-media svg path
+  transition: all .3s
+
+.social__link-media:hover svg path
+  fill: #00532C
+
+.social__link-instagram, .social__link-vkontakte
+  display: inline-block
+  width: aCalc(24)
+  height: aCalc(24)
+
+.social__link-instagram svg
+  width: aCalc(24)
+  height: aCalc(24)
+
+.social__link-vkontakte svg
+  width: aCalc(24)
+  height: aCalc(24)

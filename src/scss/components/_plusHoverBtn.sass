@@ -1,0 +1,57 @@
+
+.plusHover-btn
+  z-index: 0
+  right: aCalc(15)
+  top: aCalc(15)
+  position: absolute
+  display: grid
+  justify-content: center
+  align-content: center
+  border-radius: 50%
+  width: aCalc(45)
+  height: aCalc(45)
+  background-color: transparent
+  transition: all .3s
+  +r($sm)
+    width: 32px
+    height: 32px
+
+.plusHover-btn svg
+  width: aCalc(25)
+  height: aCalc(25)
+  +r($sm)
+    width: 18px
+    height: 18px
+
+.plusHover-inner
+  position: relative
+
+.plusHover-btn::before
+  position: absolute
+  content: ""
+  width: aCalc(44)
+  height: aCalc(44)
+  right: 0
+  top: 0px
+  border-radius: 50%
+  scale: 1
+  z-index: -1
+  transform: scale(0)
+  background-color: #006837
+  transition: all .3s
+  +r($sm)
+    width: 32px
+    height: 32px
+
+.plusHover-btn
+  svg
+    path
+      transition-duration: 1.35s
+
+.plusHover-inner:hover
+  .plusHover-btn
+    svg
+      path
+        fill: #ffffff 
+  .plusHover-btn:before
+    transform: scale(1)

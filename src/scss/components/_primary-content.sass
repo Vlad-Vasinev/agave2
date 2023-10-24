@@ -1,0 +1,85 @@
+
+.primary-content 
+  display: flex
+  justify-content: center
+  margin-bottom: aCalc(100)
+
+.content__info
+  box-sizing: border-box
+  background-color: #F9F9F9
+  position: relative
+  max-width: aCalc(690)
+  width: 100%
+  max-height: aCalc(700)
+  display: grid
+  justify-content: center
+  padding-bottom: aCalc(46)
+  cursor: pointer
+
+.special__item-btn:before
+  transition: all .3s
+  background-color: #006837
+  transform: scale(0)
+
+.content__info:hover
+  .plus-btn
+    svg
+      path
+        fill: #ffffff 
+  .special__item-btn:before
+    transform: scale(1)
+
+.content__info-title
+  max-width: aCalc(523)
+  text-align: center
+  color: #000
+  font-size: aCalc(32)
+  font-style: normal
+  font-weight: 400
+  line-height: aCalc(34)
+
+.content__info-subtitle
+  display: block
+  margin-top: aCalc(10)
+  text-align: center
+  font-weight: 400
+  font-size: aCalc(18)
+  line-height: aCalc(26)
+
+.content__info-img
+  max-width: aCalc(322)
+  width: 100%
+  width: 100%
+  max-height: aCalc(356)
+  margin: aCalc(97) auto aCalc(30)
+
+
+.content__info-img img
+  object-fit: cover
+  width: 100%
+
+.content__img
+  max-width: aCalc(1070)
+  width: 100%
+  max-height: aCalc(700)
+
+.content__img img
+  object-fit: cover
+  width: 100%
+
+.plus-btn
+  right: aCalc(15)
+  top: aCalc(15)
+  position: absolute
+  display: grid
+  justify-content: center
+  align-content: center
+  border-radius: 50%
+  width: aCalc(44)
+  height: aCalc(44)
+  background-color: transparent
+  transition: all .3s
+
+.plus-btn svg
+  width: aCalc(25)
+  height: aCalc(25)

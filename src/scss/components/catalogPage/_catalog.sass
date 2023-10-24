@@ -1,0 +1,183 @@
+
+
+// .catalog
+//   +r($sm)
+//     padding-top: 118px
+
+.catalog__title
+  color: #0E0E0E
+  text-align: center
+  font-size: aCalc(250)
+  font-style: normal
+  font-weight: 300
+  line-height: normal
+  text-transform: uppercase
+  +r($sm)
+    font-size: 50px
+    font-weight: 300
+    margin-bottom: 16px
+
+.catalog__list
+  width: 100%
+  display: grid
+  justify-content: center
+  grid-template-columns: repeat(4,1fr)
+  gap: aCalc(20) aCalc(24)
+  margin-bottom: aCalc(120)
+  +r($sm)
+    grid-gap: 7px
+    grid-template-columns: 174px 174px
+    margin-bottom: 40px
+
+.catalog__el
+  cursor: pointer
+  background-color: #F9F9F9
+  min-height: aCalc(650)
+  +r($sm)
+    border-radius: 12px
+
+.catalog-img-secondary
+  display: none
+
+.catalog__el:hover .catalog-img-primary
+  display: none
+
+.catalog__el:hover .catalog-img-secondary
+  display: block
+
+.catalog__el.catalog__el_specialFirst .catalog__link-inner
+  margin: 0 auto
+  max-width: aCalc(650)
+  width: 100%
+  overflow: hidden
+
+.catalog__el.catalog__el_specialLast .catalog__link-inner
+  margin: 0 auto
+  max-width: aCalc(650)
+  width: 100%
+  overflow: hidden
+
+.catalog__el.catalog__el_ordinary .catalog__link-inner
+  display: grid
+  justify-content: center
+  align-content: center
+  max-height: aCalc(422)
+  margin: 0 auto
+  overflow: hidden
+  +r($sm)
+    max-height: 100%
+
+.catalog__el.catalog__el_ordinary .catalog__link
+  display: grid
+  justify-content: center
+  align-content: center
+
+.catalog__el, .catalog__link
+  display: block
+  max-height: aCalc(650)
+  height: 100%
+  +r($sm)
+    min-height: 247px
+
+.catalog__el img
+  +r($sm)
+    max-width: 176px
+    width: 100%
+    height: 176px
+    object-fit: cover
+
+.catalog__link-inner
+  pointer-events: none
+
+.catalog__link
+  position: relative
+  max-width: aCalc(866)
+  width: 100% !important
+  max-width: 100% !important
+  +r($sm)
+    max-width: 176px
+    width: 100%
+    display: grid
+    justify-content: center
+    align-items: center
+
+.catalog__el.catalog__el_ordinary img
+  width: aCalc(422)
+  height: aCalc(422)
+  +r($sm)
+    max-width: 176px
+    width: 100%
+    height: 176px
+    object-fit: cover
+
+.catalog__el.catalog__el_specialFirst img
+  height: aCalc(650)
+  +r($sm)
+    height: 176px
+    max-width: 176px
+    width: 100%
+    object-fit: cover
+
+.catalog__el.catalog__el_specialLast img
+  height: aCalc(650)
+  +r($sm)
+    height: 176px
+    max-width: 176px
+    width: 100%
+    object-fit: cover
+
+.catalog__link img
+  pointer-events: none
+  object-fit: contain
+  width: 100%
+
+.catalog__link-info
+  max-width: aCalc(212)
+  width: 100%
+  position: absolute
+  bottom: aCalc(20)
+  left: aCalc(20)
+  pointer-events: none
+  +r($sm)
+    max-width: 156px
+    width: 100%
+    bottom: 10px
+    left: 10px
+.catalog__link-title
+  color: #000
+  font-size: aCalc(16)
+  font-style: normal
+  font-weight: 400
+  line-height: aCalc(24)
+  margin-bottom: aCalc(10)
+  pointer-events: none
+  +r($sm)
+    font-size: 11px
+    line-height: normal
+
+.catalog__link-price
+  color: #000
+  font-size: aCalc(16)
+  font-style: normal
+  line-height: aCalc(24)
+  pointer-events: none
+  +r($sm)
+    font-size: 11px
+    line-height: normal
+
+.email-block.catalog-email
+  margin-bottom: aCalc(120)
+
+.catalog__el.catalog__el_specialFirst
+  grid-column-start: 1
+  grid-column-end: 3
+  +r($sm)
+    grid-column-start: initial
+    grid-column-end: initial
+
+.catalog__el.catalog__el_specialLast
+  grid-column-start: 3
+  grid-column-end: 5
+  +r($sm)
+    grid-column-start: initial
+    grid-column-end: initial

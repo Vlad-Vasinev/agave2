@@ -1,0 +1,57 @@
+[
+  {
+    "image": "img/galleryItem1.png",
+    "href": "#0",
+    "type": "Готовые объекты",
+    "name": "П-94",
+    "area": 160,
+    "size": "9х11.4 м",
+    "floors": "2",
+    "price": "2",
+    "tags": "1 2 3 большой дом два этажа сосна"
+  },
+  {
+    "image": "img/galleryItem2.png",
+    "href": "#1",
+    "type": "Готовые объекты",
+    "name": "П-95",
+    "area": 160,
+    "size": "9х11.4 м",
+    "floors": "2",
+    "price": "2",
+    "tags": "1 2 3 большой дом два этажа сосна"
+  },
+  {
+    "image": "img/galleryItem3.png",
+    "href": "#2",
+    "type": "Готовые объекты",
+    "name": "П-96",
+    "area": 160,
+    "size": "9х11.4 м",
+    "floors": "2",
+    "price": "2",
+    "tags": "1 2 3 большой дом два этажа сосна"
+  },
+  {
+    "image": "img/galleryItem4.png",
+    "href": "#3",
+    "type": "Готовые объекты",
+    "name": "П-97",
+    "area": 160,
+    "size": "9х11.4 м",
+    "floors": "2",
+    "price": "2",
+    "tags": "1 2 3 большой дом два этажа сосна"
+  },
+  {
+    "image": "img/galleryItem5.png",
+    "href": "#4",
+    "type": "Готовые объекты",
+    "name": "П-98",
+    "area": 160,
+    "size": "9х11.4 м",
+    "floors": "2",
+    "price": "2",
+    "tags": "1 2 3 большой дом два этажа сосна"
+  }
+]

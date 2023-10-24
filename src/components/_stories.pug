@@ -1,0 +1,82 @@
+//- .stories
+//-   .stories-inner
+//-     .stories-item(js-story data-srcset='https://www.cameraegg.org/wp-content/uploads/2015/06/canon-powershot-g3-x-sample-images-1.jpg,img/story1.png,img/story2.png,img/story3.png,img/strories (4).png')
+//-       .img
+//-         img(src="img/strories (1).png")
+//-       span Техобслуживание 
+//-     .stories-item(js-story data-srcset='img/Waffle falling over.webm,img/Waffle falling over.webm')
+//-       .img
+//-         img(src="img/strories (2).png")
+//-       span В гармонии с природой 
+//-     .stories-item(js-story data-srcset='https://assets.codepen.io/9632/SampleVideo_1280x720_1mb.mp4')
+//-       .img
+//-         img(src="img/strories (3).png")
+//-       span 5 причин построить дом из Кедра 
+//-     .stories-item(js-story data-srcset='img/story1.png,img/story2.png,img/story3.png,img/strories (4).png')
+//-       .img
+//-         img(src="img/strories (4).png")
+//-       span Протопи ты мне баньку по-белому... 
+//-     .stories-item(js-story data-srcset='img/story1.png,img/story2.png,img/story3.png,img/strories (4).png')
+//-       .img
+//-         img(src="img/strories (5).png")
+//-       span Сколько домкратов бывает в... 
+//-     .stories-item(js-story data-srcset='img/story1.png,img/story2.png,img/story3.png,img/strories (4).png')
+//-       .img
+//-         img(src="img/strories (6).png")
+//-       span Как с комфортом пережить... 
+//-     .stories-item(js-story data-srcset='img/story1.png,img/story2.png,img/story3.png,img/strories (4).png')
+//-       .img
+//-         img(src="img/strories (7).png")
+//-       span Техосмотр дома — ВАЖНО! 
+//-     .stories-item(js-story data-srcset='img/story1.png,img/story2.png,img/story3.png,img/strories (4).png')
+//-       .img
+//-         img(src="img/strories (7).png")
+//-       span Фишки Топового дизайнера в ... 
+//- .stories-container
+//-   .stories-container-inner
+//-   .close-btn
+//-     svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+//-       rect(x="2.22266" y="0.807617" width="24" height="2" rx="1" transform="rotate(45 2.22266 0.807617)" fill="#202020")
+//-       rect(x="0.808594" y="17.7782" width="24" height="2" rx="1" transform="rotate(-45 0.808594 17.7782)" fill="#202020")
+//- template(stories-full)
+//-   .stories-full-bigSlider
+//-     .swiper-wrapper
+//-     //.swiper-navigation
+//-     //  .swiper-button-prev
+//-     //  .swiper-button-next
+//- template(story-full)
+//-   .stories-full-story
+//-     .swiper-wrapper-inner
+//-     .swiper-pagination
+//-     .swiper-navigation
+//-       .swiper-button-prev-in
+//-       .swiper-button-next-in
+.stories(js-stories-img-slider)
+  .stories-inner
+    each text, i in ['Техобслуживание', 'В гармонии с природой', '5 причин построить дом из Кедра', 'Протопи ты мне баньку по-белому...', 'Сколько домкратов бывает в...', 'Как с комфортом пережить...', 'Техосмотр дома — ВАЖНО!', 'Фишки Топового дизайнера в ...', 'Техобслуживание 222', 'Техобслуживание 333', 'Техобслуживание 444', 'Техобслуживание 555', 'Техобслуживание 667', 'Техобслуживание 777', 'Техобслуживание 888', 'Техобслуживание 999', 'Техобслуживание 101010',]
+      .stories-item.swiper-slide(data-video-src='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' data-img-src='/img/storiesPreview.png')
+        .img.stories-item-preview
+          img(src='img/stories/stories' + (i + 1) + '.png')
+        .stories-item-desc
+          span=text
+.stories-container
+  .stories-bg
+  .stories-container-inner
+    .fullscreen-stories.swiper-wrapper
+    .slider-navigation
+      .swiper-pagination.slider-navigation__pagination
+      .slider-navigation__prev
+        .slider-navigation-prev.slide-button.slide-button_horizontal
+          span 
+            svg(xmlns='http://www.w3.org/2000/svg' width='20' height='21' fill='none' viewBox='0 0 20 21')
+              path(stroke='#161616' stroke-linecap='round' stroke-width='2' d='m14.17 2.76-8.34 7.5 8.34 7.5')
+      .slider-navigation__next
+        .slider-navigation-next.slide-button.slide-button_horizontal
+          span 
+            svg(xmlns='http://www.w3.org/2000/svg' width='20' height='21' fill='none' viewBox='0 0 20 21')
+              path(stroke='#161616' stroke-linecap='round' stroke-width='2' d='m14.17 2.76-8.34 7.5 8.34 7.5')
+    .pagination-container
+  .close-btn
+    svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+      path(fill='#fff' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+      path(fill='#fff' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
