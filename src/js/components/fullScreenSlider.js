@@ -24,37 +24,38 @@ export default class fsSlider {
 
     //Vlad's substance
 
-    this.options = options;
+    this.option = options;
     //Vlad's substance
   }
 
   showOptions() {
-    console.log(this.options);
+    console.log(this.option);
   }
 
   init() {
-    document
-      .querySelectorAll("[data-fs-ctr]:not(._fs-inited)")
-      .forEach((fsCtr) => {
+     document.querySelectorAll("[data-fs-ctr]:not(._fs-inited)").forEach((fsCtr) => {
         const sldArr = fsCtr.querySelectorAll("[data-fs-full]");
-        sldArr.forEach((el) => {
+        sldArr.forEach((el, index) => {
           let srcArr = Array.from(sldArr).map((el) => el.dataset.fsFull);
           if (fsCtr.dataset.fsSrcset) {
             srcArr = srcArr.concat(fsCtr.dataset.fsSrcset.split(","));
           }
 
           el.addEventListener("click", (e) => {
-            this.openSlider(e, srcArr, fsCtr);
-            console.log("open listener");
+            console.log(index);
+            this.openSlider(e, srcArr, fsCtr, index);
+            //console.log("open listener");
+            
+            //console.log(srcArr);
           });
         });
         fsCtr.classList.add("_fs-inited");
       });
 
   }
-  openSlider(event = undefined, srcArr = undefined, fsCtr = null) {
+  openSlider(event = undefined, srcArr = undefined, fsCtr = null, initialIndex = 0) {
     console.log("open slider func");
-
+    console.log(initialIndex);
     if (!this.lastCtr) {
       this.lastCtr = fsCtr;
       this.slides = this.mountSlides(srcArr);
@@ -102,11 +103,11 @@ export default class fsSlider {
             });
           }
 
-          if(isMobile()) {
-            document.querySelectorAll(".swiper-zoom-container").forEach((el, index) => {
-              el.setAttribute("js-lazy", "js-lazy")
-            });
-          }
+          // if(isMobile()) {
+          //   document.querySelectorAll(".swiper-zoom-container").forEach((el, index) => {
+          //     el.setAttribute("js-lazy", "js-lazy")
+          //   });
+          // }
         },
         callback_finish: function () {
           this.vl.destroy();
@@ -124,6 +125,8 @@ export default class fsSlider {
       once: true,
     });
 
+    //console.log(this.option.thumbs)
+
     this.fsSliderObj = new Swiper(this.fsSliderEl, {
       wrapperClass: "swiper-wrapper",
       slideClass: "swiper-slide",
@@ -132,22 +135,23 @@ export default class fsSlider {
       //centeredSlides: true,
       slidesPerView: 1,
       runCallbacksOnInit: false,
-      pagination: this.options.pagination,
-      navigation: this.options.navigation,
-      thumbs: this.options.thumbs,
-      keyboard: this.options.keyboard,
+      pagination: this.option.pagination,
+      navigation: this.option.navigation,
+      thumbs: this.option.thumbs,
+      keyboard: this.option.keyboard,
+      initialSlide: initialIndex,
       on: {
-        afterInit: function (sw) {
-          if (event) {
-            sw.slideTo(
-              getChildIndex(
-                event.currentTarget,
-                (el) => el.nodeType != 3 && el.hasAttribute("data-fs-full")
-              ) || 0,
-              0
-            );
-          }
-        },
+        // afterInit: function (sw) {
+        //   if (event) {
+        //     sw.slideTo(
+        //       getChildIndex(
+        //         event.currentTarget,
+        //         (el) => el.nodeType != 3 && el.hasAttribute("data-fs-full")
+        //       ) || 0,
+        //       0
+        //     );
+        //   }
+        // },
       },
     });
 
