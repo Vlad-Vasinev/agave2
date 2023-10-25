@@ -123,7 +123,7 @@ export default class fsSlider {
 
     this.fsClose.addEventListener("click", this.closeSlider.bind(this), {
       once: true,
-    });
+    },);
 
     //console.log(this.option.thumbs)
 
@@ -141,6 +141,27 @@ export default class fsSlider {
       keyboard: this.option.keyboard,
       initialSlide: initialIndex,
       on: {
+        beforeInit: function () {
+
+          let ulBullets = document.querySelector('.gallery-thumbs__content')
+
+          console.log(document.querySelector('.gallery-thumbs__content'))
+
+          ulBullets.querySelectorAll('.swiper-pagination-bullet').forEach((item) => {
+            console.log(item.innerHTML)
+            item.innerHTML = '<span class="progress"></span>'
+          }); 
+        }
+        // beforeInit: function () {
+        //   let thumbsWrapp = document.querySelector('.gallery-thumbs__content')
+        //   console.log('beforeInit is running...')
+        //   srcArr.forEach(element => {
+        //     let thumbEl = `<li class = 'gallery-thumbs__el'> <img data-src = ${element}></img> </li>`
+        //     thumbsWrapp.append(thumbEl)
+        //   });
+        //   console.log(thumbsWrapp)
+          
+        // }
         // afterInit: function (sw) {
         //   if (event) {
         //     sw.slideTo(
@@ -192,5 +213,3 @@ export default class fsSlider {
     this.slides = [];
   }
 }
-
-console.log('test console')

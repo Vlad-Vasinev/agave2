@@ -24,6 +24,7 @@ if (isMobile()) {
     },
   });
   window.fsSlider = new fsSlider(document.querySelector(".fullscreen-slider"), {
+    allowTouchMove: false,
     keyboard: {
       enabled: false,
     },
@@ -40,25 +41,10 @@ if (isMobile()) {
     },
   });
 
-  // document.querySelectorAll('.product__el.swiper-slide').forEach((item) => {
-  //   item.addEventListener('click', () => {
-
-  //     console.log('click on product slider')
-
-  //     document.querySelectorAll('.swiper-slide.fullscreen-slider__slide').forEach((el) => {
-  //       if(el.getAttribute('data-swiper-slide-index') === item.getAttribute('data-swiper-slide-index')) {
-  //         el.classList.add('swiper-slide-active');
-  //       }
-  //       else {
-  //         el.classList.remove('swiper-slide-active');
-  //       }
-  //     })
-  //   })
-  // })
-
 }
 
 if (isTablet() || isDesktop()) {
+
   let swiper2 = new Swiper(".gallery-thumbs", {
     spaceBetween: 10,
     allowSlideNext: false,
@@ -79,8 +65,8 @@ if (isTablet() || isDesktop()) {
         ".fullscreen-slider .slider-pagination-navigation .slider-navigation-prev",
     },
     pagination: {
-      el: "",
-      clickable: false,
+      el: ".gallery-thumbs__content",
+      clickable: true,
     },
   });
 }
