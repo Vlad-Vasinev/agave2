@@ -548,10 +548,19 @@
   transition: 1.2s linear
 
 .gallery-thumbs__content.swiper-wrapper
-  width: aCalc(550)
-  //width: 100%
+  width: aCalc(650)
 
 .gallery-thumbs__content .swiper-pagination-bullet
   width: aCalc(100)
   height: aCalc(100)
-  //background-color: transparent
+  border-radius: 0 !important
+  opacity: 1 !important
+  background-color: transparent
+
+.gallery-thumbs__el
+  border-radius: none
+
+.gallery-thumbs__content .swiper-pagination-bullet.swiper-pagination-bullet-active
+  overflow: hidden
+  background-color: transparent
+  border: 2px solid #006837

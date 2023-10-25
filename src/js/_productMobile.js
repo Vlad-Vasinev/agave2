@@ -69,6 +69,7 @@ if (isTablet() || isDesktop()) {
       clickable: true,
     },
   });
+
 }
 
 

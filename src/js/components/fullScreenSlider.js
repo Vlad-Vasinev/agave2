@@ -125,8 +125,6 @@ export default class fsSlider {
       once: true,
     },);
 
-    //console.log(this.option.thumbs)
-
     this.fsSliderObj = new Swiper(this.fsSliderEl, {
       wrapperClass: "swiper-wrapper",
       slideClass: "swiper-slide",
@@ -143,36 +141,32 @@ export default class fsSlider {
       on: {
         beforeInit: function () {
 
+          // let ulBullets = document.querySelector('.gallery-thumbs__content')
+
+          // console.log(document.querySelector('.gallery-thumbs__content'))
+
+          // ulBullets.querySelectorAll('.swiper-pagination-bullet').forEach((item) => {
+          //   console.log('hhhhhh')
+          //   item.innerHTML = '<span class="progress"></span>'
+          // }); 
+        },
+        afterInit: function (sw) {
+
           let ulBullets = document.querySelector('.gallery-thumbs__content')
-
-          console.log(document.querySelector('.gallery-thumbs__content'))
-
-          ulBullets.querySelectorAll('.swiper-pagination-bullet').forEach((item) => {
-            console.log(item.innerHTML)
-            item.innerHTML = '<span class="progress"></span>'
+          ulBullets.querySelectorAll('.swiper-pagination-bullet').forEach((item, index) => {
+            item.innerHTML = `<span class="gallery-thumbs__el"><img src=${srcArr[index]}></img></span>`
           }); 
-        }
-        // beforeInit: function () {
-        //   let thumbsWrapp = document.querySelector('.gallery-thumbs__content')
-        //   console.log('beforeInit is running...')
-        //   srcArr.forEach(element => {
-        //     let thumbEl = `<li class = 'gallery-thumbs__el'> <img data-src = ${element}></img> </li>`
-        //     thumbsWrapp.append(thumbEl)
-        //   });
-        //   console.log(thumbsWrapp)
-          
-        // }
-        // afterInit: function (sw) {
-        //   if (event) {
-        //     sw.slideTo(
-        //       getChildIndex(
-        //         event.currentTarget,
-        //         (el) => el.nodeType != 3 && el.hasAttribute("data-fs-full")
-        //       ) || 0,
-        //       0
-        //     );
-        //   }
-        // },
+
+          // if (event) {
+          //   sw.slideTo(
+          //     getChildIndex(
+          //       event.currentTarget,
+          //       (el) => el.nodeType != 3 && el.hasAttribute("data-fs-full")
+          //     ) || 0,
+          //     0
+          //   );
+          // }
+        },
       },
     });
 
