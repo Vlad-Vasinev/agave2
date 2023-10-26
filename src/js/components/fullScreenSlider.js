@@ -3,11 +3,7 @@ import getChildIndex from "../functions/getChildIndex";
 import { disableScroll } from ".././functions/disable-scroll";
 import { enableScroll } from ".././functions/enable-scroll";
 
-// const ZoomMove = require('../functions/zoomove')
-
-
 export default class fsSlider {
-  //options = "222222";
 
   constructor(sliderEl, options) {
     //.swiper-wrapper.two-side-slider__wrapper(data-fs-ctr)
@@ -26,7 +22,6 @@ export default class fsSlider {
     // document.querySelectorAll('[data-fs-full]')[2].click()
 
     //Vlad's substance
-
     this.option = options;
     //Vlad's substance
   }
@@ -69,30 +64,6 @@ export default class fsSlider {
       this.slides = this.mountSlides(srcArr);
     }
 
-    // if(isDesktop()) {
-    //   let attr = [];
-    //   let figures = [];
-
-    //   document
-    //     .querySelectorAll(".swiper-zoom-container img")
-    //     .forEach((el) => {
-    //       attr.push(el.getAttribute("data-src"));
-    //     });
-    //   document.querySelectorAll(".swiper-zoom-container").forEach((el, index) => {
-    //       el.removeAttribute("js-lazy");
-    //       let newFigure = `<figure class="zoo-item" data-zoo-image = '${attr[index]}'></figure>`;
-    //       figures.push(newFigure);
-
-    //       el.innerHTML = figures[index];
-    //     });
-    //     $(".zoo-item").ZooMove();
-    //   document.querySelectorAll(".zoo-item").forEach((el) => {
-    //     el.querySelectorAll(".zoo-img").forEach((element) => {
-    //       element.style.cursor ="url('../../img/cross-inside-circle.svg'), auto";
-    //     })
-    //   });
-    // }
-
     this.vl = new vanillaLazy(
       {
         container: this.fsSliderEl,
@@ -108,22 +79,31 @@ export default class fsSlider {
             let attr = [];
             let figures = [];
   
+            console.log('vanila is here');
+
             document.querySelectorAll(".swiper-zoom-container").forEach((el, index) => {
+
+                console.log(el);
 
                 attr.push(el.querySelector('img').getAttribute("data-src"));
 
                 el.removeAttribute("js-lazy");
-                let newFigure = `<figure class="zoo-item" data-zoo-image = '${attr[index]}'></figure>`;
+                let newFigure = `<figure class="zoo-item"  data-zoo-image = '${attr[index]}'></figure>`; //
                 figures.push(newFigure);
 
                 el.innerHTML = figures[index];
-              });
-              $(".zoo-item").ZooMove();
-            document.querySelectorAll(".zoo-item").forEach((el) => {
-              el.querySelectorAll(".zoo-img").forEach((element) => {
-                element.style.cursor ="url('../../img/cross-inside-circle.svg'), auto";
-              })
             });
+            
+            $(".zoo-item").ZooMove({
+              //cursor: '[progress]' 
+            });
+            //document.querySelector('body').style.cursor ="url('../../img/cross-inside-circle.svg'), auto";
+            //document.querySelector('html').style.cursor ="url('../../img/cross-inside-circle.svg'), auto";
+            // document.querySelectorAll(".zoo-item").forEach((el) => {
+            //   el.querySelectorAll(".zoo-img").forEach((element) => {
+            //     element.style.cursor ="url('../../img/cross-inside-circle.svg'), auto";
+            //   })
+            // });
           }
         },
         callback_finish: function () {
@@ -158,14 +138,6 @@ export default class fsSlider {
       on: {
         beforeInit: function () {
 
-          // let ulBullets = document.querySelector('.gallery-thumbs__content')
-
-          // console.log(document.querySelector('.gallery-thumbs__content'))
-
-          // ulBullets.querySelectorAll('.swiper-pagination-bullet').forEach((item) => {
-          //   console.log('hhhhhh')
-          //   item.innerHTML = '<span class="progress"></span>'
-          // }); 
         },
         afterInit: function (sw) {
 
