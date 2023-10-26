@@ -87,7 +87,7 @@ export default class fsSlider {
 
                 attr.push(el.querySelector('img').getAttribute("data-src"));
 
-                el.removeAttribute("js-lazy");
+                el.removeAttribute("js-lazy");  
                 let newFigure = `<figure class="zoo-item"  data-zoo-image = '${attr[index]}'></figure>`; //
                 figures.push(newFigure);
 
@@ -95,15 +95,15 @@ export default class fsSlider {
             });
             
             $(".zoo-item").ZooMove({
-              //cursor: '[progress]' 
+              // cursor: '[progress]' 
             });
             //document.querySelector('body').style.cursor ="url('../../img/cross-inside-circle.svg'), auto";
-            //document.querySelector('html').style.cursor ="url('../../img/cross-inside-circle.svg'), auto";
-            // document.querySelectorAll(".zoo-item").forEach((el) => {
-            //   el.querySelectorAll(".zoo-img").forEach((element) => {
-            //     element.style.cursor ="url('../../img/cross-inside-circle.svg'), auto";
-            //   })
-            // });
+            //document.querySelector('body').style.cursor ="url('./img/cross-inside-circle.svg') !important";
+            document.querySelectorAll(".zoo-item").forEach((el) => {
+              el.querySelectorAll(".zoo-img").forEach((element) => {
+                element.style.cursor = "url(https://w7.pngwing.com/pngs/231/178/png-transparent-emoji-vomiting-illustration-emoji-vomiting-emoticon-smiley-iphone-emojis-grass-sticker-woman.png) !important"
+              })
+            });
           }
         },
         callback_finish: function () {
