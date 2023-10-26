@@ -3,6 +3,9 @@ import getChildIndex from "../functions/getChildIndex";
 import { disableScroll } from ".././functions/disable-scroll";
 import { enableScroll } from ".././functions/enable-scroll";
 
+// const ZoomMove = require('../functions/zoomove')
+
+
 export default class fsSlider {
   //options = "222222";
 
@@ -75,7 +78,7 @@ export default class fsSlider {
         callback_loaded: function (el) {
           el.parentElement.classList.add("is-loaded");
 
-          setTimeout(() => (el.parentElement.style.backgroundImage = ""), 1500);
+          //setTimeout(() => (el.parentElement.style.backgroundImage = ""), 1500);
 
           if(isDesktop()) {
             let attr = [];
@@ -92,10 +95,9 @@ export default class fsSlider {
                 figures.push(newFigure);
 
                 el.innerHTML = figures[index];
-                $(".zoo-item").ZooMove();
-
+                //$(".zoo-item").ZooMove();
               });
-  
+              //$(".zoo-item").ZooMove();
             document.querySelectorAll(".zoo-item").forEach((el) => {
               el.querySelectorAll(".zoo-img").forEach((element) => {
                 element.style.cursor ="url('../../img/cross-inside-circle.svg'), auto";

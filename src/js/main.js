@@ -1,3 +1,4 @@
+import './functions/zoomove'
 import './_vendor';
 import './_global';
 import vars from './_vars';

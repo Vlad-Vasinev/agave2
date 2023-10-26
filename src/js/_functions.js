@@ -65,9 +65,9 @@ import Swiper, { Navigation, Pagination, Autoplay, Zoom, Keyboard, Thumbs} from 
 Swiper.use([Navigation, Pagination, Autoplay, Zoom, Keyboard, Thumbs]);
 window.Swiper = Swiper
 
-
+// import './functions/zoomove';
 // import { fileDrag } from './functions/fileDrag';
-
+//const ZoomMove = require('./functions/zoomove')
 
 
 // Подключение анимаций по скроллу
