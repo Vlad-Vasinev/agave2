@@ -69,6 +69,30 @@ export default class fsSlider {
       this.slides = this.mountSlides(srcArr);
     }
 
+    // if(isDesktop()) {
+    //   let attr = [];
+    //   let figures = [];
+
+    //   document
+    //     .querySelectorAll(".swiper-zoom-container img")
+    //     .forEach((el) => {
+    //       attr.push(el.getAttribute("data-src"));
+    //     });
+    //   document.querySelectorAll(".swiper-zoom-container").forEach((el, index) => {
+    //       el.removeAttribute("js-lazy");
+    //       let newFigure = `<figure class="zoo-item" data-zoo-image = '${attr[index]}'></figure>`;
+    //       figures.push(newFigure);
+
+    //       el.innerHTML = figures[index];
+    //     });
+    //     $(".zoo-item").ZooMove();
+    //   document.querySelectorAll(".zoo-item").forEach((el) => {
+    //     el.querySelectorAll(".zoo-img").forEach((element) => {
+    //       element.style.cursor ="url('../../img/cross-inside-circle.svg'), auto";
+    //     })
+    //   });
+    // }
+
     this.vl = new vanillaLazy(
       {
         container: this.fsSliderEl,
@@ -84,32 +108,23 @@ export default class fsSlider {
             let attr = [];
             let figures = [];
   
-            document
-              .querySelectorAll(".swiper-zoom-container img")
-              .forEach((el) => {
-                attr.push(el.getAttribute("data-src"));
-              });
             document.querySelectorAll(".swiper-zoom-container").forEach((el, index) => {
+
+                attr.push(el.querySelector('img').getAttribute("data-src"));
+
                 el.removeAttribute("js-lazy");
                 let newFigure = `<figure class="zoo-item" data-zoo-image = '${attr[index]}'></figure>`;
                 figures.push(newFigure);
 
                 el.innerHTML = figures[index];
-                //$(".zoo-item").ZooMove();
               });
-              //$(".zoo-item").ZooMove();
+              $(".zoo-item").ZooMove();
             document.querySelectorAll(".zoo-item").forEach((el) => {
               el.querySelectorAll(".zoo-img").forEach((element) => {
                 element.style.cursor ="url('../../img/cross-inside-circle.svg'), auto";
               })
             });
           }
-
-          // if(isMobile()) {
-          //   document.querySelectorAll(".swiper-zoom-container").forEach((el, index) => {
-          //     el.setAttribute("js-lazy", "js-lazy")
-          //   });
-          // }
         },
         callback_finish: function () {
           this.vl.destroy();

@@ -1069,7 +1069,7 @@
 
 "@types/jquery@^3.5.25":
   version "3.5.25"
-  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.25.tgz#c817c71d414855f7d71f46da39f43e6b9579b0b9"
+  resolved "https://registry.npmjs.org/@types/jquery/-/jquery-3.5.25.tgz"
   integrity sha512-gykx2c+OZf5nx2tv/5fDQqmvGgTiXshELy5jf9IgXPtVfSBl57IUYByN4osbwMXwJijWGOEYQABzGaFZE79A0Q==
   dependencies:
     "@types/sizzle" "*"
@@ -1111,7 +1111,7 @@
 
 "@types/sizzle@*":
   version "2.3.5"
-  resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.5.tgz#d93dd29cdcd5801d90be968073b09a6b370780e4"
+  resolved "https://registry.npmjs.org/@types/sizzle/-/sizzle-2.3.5.tgz"
   integrity sha512-tAe4Q+OLFOA/AMD+0lq8ovp8t3ysxAOeaScnfNdZpUxaGl51ZMDEITxkvFl1STudQ58mz6gzVGl9VhMKhwRnZQ==
 
 "@types/vinyl@^2.0.4":
@@ -3656,7 +3656,7 @@ expand-tilde@^2.0.0, expand-tilde@^2.0.2:
 
 expose-loader@^4.1.0:
   version "4.1.0"
-  resolved "https://registry.yarnpkg.com/expose-loader/-/expose-loader-4.1.0.tgz#9c6d55d24e3ac0e5d50ee5dc7930d564fc475d48"
+  resolved "https://registry.npmjs.org/expose-loader/-/expose-loader-4.1.0.tgz"
   integrity sha512-oLAesnzerwDGGADzBMnu0LPqqnlVz6e2V9lTa+/4X6VeW9W93x/nJpw05WBrcIdbqXm/EdnEQpiVDFFiQXuNfg==
 
 ext-list@^2.0.0:
@@ -5712,12 +5712,7 @@ jest-worker@^27.4.5:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
-jquery@^3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
-  integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
-
-jquery@latest:
+jquery@^3.7.1, jquery@latest:
   version "3.7.1"
   resolved "https://registry.npmjs.org/jquery/-/jquery-3.7.1.tgz"
   integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
