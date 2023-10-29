@@ -2,6 +2,7 @@ import vanillaLazy from "vanilla-lazyload";
 import getChildIndex from "../functions/getChildIndex";
 import { disableScroll } from ".././functions/disable-scroll";
 import { enableScroll } from ".././functions/enable-scroll";
+import { isDesktop } from "../functions/check-viewport";
 
 export default class fsSlider {
 
@@ -27,7 +28,7 @@ export default class fsSlider {
   }
 
   showOptions() {
-    console.log(this.option);
+    // console.log(this.option);
   }
 
   init() {
@@ -40,11 +41,7 @@ export default class fsSlider {
           }
 
           el.addEventListener("click", (e) => {
-            console.log(index);
             this.openSlider(e, srcArr, fsCtr, index);
-            //console.log("open listener");
-            
-            //console.log(srcArr);
           });
         });
         fsCtr.classList.add("_fs-inited");
@@ -53,7 +50,6 @@ export default class fsSlider {
   }
   openSlider(event = undefined, srcArr = undefined, fsCtr = null, initialIndex = 0) {
     console.log("open slider func");
-    console.log(initialIndex);
     if (!this.lastCtr) {
       this.lastCtr = fsCtr;
       this.slides = this.mountSlides(srcArr);
@@ -79,31 +75,32 @@ export default class fsSlider {
             let attr = [];
             let figures = [];
   
-            console.log('vanila is here');
+            let imgSrc = "url('../../img/circle-inside.png'), auto";
 
             document.querySelectorAll(".swiper-zoom-container").forEach((el, index) => {
-
-                console.log(el);
 
                 attr.push(el.querySelector('img').getAttribute("data-src"));
 
                 el.removeAttribute("js-lazy");  
-                let newFigure = `<figure class="zoo-item"  data-zoo-image = '${attr[index]}'></figure>`; //
+                let newFigure = `<figure class="zoo-item" data-zoo-image='${attr[index]}'></figure>`; //
                 figures.push(newFigure);
 
                 el.innerHTML = figures[index];
             });
             
             $(".zoo-item").ZooMove({
-              // cursor: '[progress]' 
+              //cursor: `[false]` data-zoo-cursor = "[false]"
             });
-            //document.querySelector('body').style.cursor ="url('../../img/cross-inside-circle.svg'), auto";
-            //document.querySelector('body').style.cursor ="url('./img/cross-inside-circle.svg') !important";
-            document.querySelectorAll(".zoo-item").forEach((el) => {
-              el.querySelectorAll(".zoo-img").forEach((element) => {
-                element.style.cursor = "url(https://w7.pngwing.com/pngs/231/178/png-transparent-emoji-vomiting-illustration-emoji-vomiting-emoticon-smiley-iphone-emojis-grass-sticker-woman.png) !important"
-              })
-            });
+            document.querySelectorAll('.zoo-item').forEach((el) => {
+              //el.querySelector(".zoo-img").removeAttribute('cursor');
+              console.log(el.querySelector(".zoo-img"))
+              el.querySelector(".zoo-img").style.cursor = "url('../../img/circle-inside.png'), auto"
+            })
+              // el.querySelector(".zoo-img").forEach((element) => {
+              //   console.log(element)
+              //   element.removeAttribute('cursor');
+              //   element.style.cursor = "url('./img/circle-inside.png'), auto"
+              // })
           }
         },
         callback_finish: function () {
@@ -137,7 +134,6 @@ export default class fsSlider {
       initialSlide: initialIndex,
       on: {
         beforeInit: function () {
-
         },
         afterInit: function (sw) {
 
@@ -145,16 +141,6 @@ export default class fsSlider {
           ulBullets.querySelectorAll('.swiper-pagination-bullet').forEach((item, index) => {
             item.innerHTML = `<span class="gallery-thumbs__el"><img src=${srcArr[index]}></img></span>`
           }); 
-
-          // if (event) {
-          //   sw.slideTo(
-          //     getChildIndex(
-          //       event.currentTarget,
-          //       (el) => el.nodeType != 3 && el.hasAttribute("data-fs-full")
-          //     ) || 0,
-          //     0
-          //   );
-          // }
         },
       },
     });
@@ -165,8 +151,6 @@ export default class fsSlider {
     // fsSliderF.querySelector('.fullscreen-slider__close').addEventListener('click', closeSlider, { once: true })
   }
   closeSlider() {
-
-    console.log('slider is closing')
 
     this.fsEl.classList.remove("_active");
     enableScroll();
