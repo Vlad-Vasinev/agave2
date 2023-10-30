@@ -1,5 +1,5 @@
 import './vendor/focus-visible.js';
-import $ from 'jquery';
+import $ from '';
 $('div')
 window.jQuery = $;
 window.$ = $;
