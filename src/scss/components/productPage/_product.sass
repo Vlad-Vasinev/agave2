@@ -253,13 +253,28 @@
   +r($sm)
     max-width: 100%
 
+.product__el.swiper-slide
+  display: grid
+  justify-content: center
+  align-items: center
+
+.product__el picture
+  max-width: max-content
+  display: block
+  margin: 0 auto
+
 .product__el img
   object-fit: cover
   width: 100%
   +r($sm)
-    object-fit: cover
+    // object-fit: cover
     background-position: center
-    max-height: 375px 
+    // max-height: 375px 
+    object-fit: contain
+    max-width: 231px
+    width: 100%
+    background-position: center
+    max-height: 266px
 
 .product__el-mobile img
   object-fit: cover

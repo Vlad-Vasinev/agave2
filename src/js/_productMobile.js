@@ -14,9 +14,9 @@ if (isMobile()) {
     allowTouchMove: true,
     preloadImages: false,
     direction: "horizontal",
-    autoplay: {
-      delay: 2000,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    // },
     loop: true,
     pagination: {
       el: ".swiper-pagination",
