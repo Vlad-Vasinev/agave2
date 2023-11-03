@@ -81,23 +81,23 @@ let productIconEl = document.querySelectorAll('.product__info-icon');
 
 productIconEl.forEach(element => {
   if(element.getAttribute('src') === "") {
-    console.log('1')
+    // console.log('1')
     element.style.display = "none"
     element.parentNode.style.paddingLeft = "0"
   }
-  else {
-    console.log('2')
-  }
+  // else {
+  //   console.log('2')
+  // }
 });
 
 let productEl = document.querySelectorAll('.product__el')
 
 productEl.forEach(element => {
     if (element.querySelector('video')) {
-      console.log('video is here')
+      // console.log('video is here')
       element.querySelector('picture').style.display = "none"
     }
-    else {
-      console.log('smth is here')
-    }
+    // else {
+    //   console.log('smth is here')
+    // }
 });
