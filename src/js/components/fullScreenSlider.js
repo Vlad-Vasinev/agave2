@@ -74,40 +74,26 @@ export default class fsSlider {
           if(isDesktop()) {
             let attr = [];
             let figures = [];
-  
-            let imgSrc = "url('../../img/circle-inside.png'), auto";
 
             document.querySelectorAll(".swiper-zoom-container").forEach((el, index) => {
-
                 attr.push(el.querySelector('img').getAttribute("data-src"));
-
                 el.removeAttribute("js-lazy");  
+
                 let newFigure = `<figure class="zoo-item" data-zoo-image='${attr[index]}'></figure>`; //
                 figures.push(newFigure);
-
                 el.innerHTML = figures[index];
             });
             
-            $(".zoo-item").ZooMove({
-              //cursor: `[false]` data-zoo-cursor = "[false]"
-            });
+            $(".zoo-item").ZooMove({});
             document.querySelectorAll('.zoo-item').forEach((el) => {
-              //el.querySelector(".zoo-img").removeAttribute('cursor');
               el.querySelector(".zoo-img").style.cursor = "url('../../img/circle-inside.png'), auto"
             })
-              // el.querySelector(".zoo-img").forEach((element) => {
-              //   console.log(element)
-              //   element.removeAttribute('cursor');
-              //   element.style.cursor = "url('./img/circle-inside.png'), auto"
-              // })
+
           }
         },
         callback_finish: function () {
           this.vl.destroy();
         }.bind(this),
-        // callback_loaded: () => {
-
-        // }
       },
       Array.from(this.slides)
         .map((el) => el.querySelector("img"))

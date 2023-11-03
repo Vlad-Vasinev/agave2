@@ -89,3 +89,15 @@ productIconEl.forEach(element => {
     console.log('2')
   }
 });
+
+let productEl = document.querySelectorAll('.product__el')
+
+productEl.forEach(element => {
+    if (element.querySelector('video')) {
+      console.log('video is here')
+      element.querySelector('picture').style.display = "none"
+    }
+    else {
+      console.log('smth is here')
+    }
+});

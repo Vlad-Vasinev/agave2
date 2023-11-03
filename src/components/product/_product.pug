@@ -26,7 +26,7 @@ section.product
     //-     img(src="" alt="galleri img")
     //-   .galleri__el 
     //-     img(src="" alt="galleri img")
-    //- img.product__popup-img(src="" alt="popup img")
+    //- img.product__popup-img(src="" alt="popup img") data-fs-full="img/product-0.png"
   .product__inner
     .product__slider.slider-desktop
       ul.product__content(data-fs-ctr)
@@ -36,42 +36,44 @@ section.product
             <source media="(max-width:768px)" srcset="img/product-1-small.png">
             <img data-src="img/product-0.png" alt="Agave image 1">
           </picture>
-          //-img.lazy(data-src="img/product-0.png" alt="Agave image 1" )
+          <video loop muted playsinline webkit-playsinline autoplay preload="auto" controls poster="img/product-0.png">
+              <source src="img/video.webm" type="video/webm">
+              <source src="img/video.mp4" type="video/mp4">
+          </video>
         li.product__el.swiper-slide(data-fs-full="img/product-1.png")
           <picture>
             <source media="(min-width:768px)" srcset="img/product-1.png">
             <source media="(max-width:768px)" srcset="img/product-1-small.png">
             <img data-src="img/product-1.png" alt="Agave image 1">
           </picture>
-          //-img.lazy(data-src="img/product-1.png" alt="Agave image 2" )
         li.product__el.swiper-slide(data-fs-full="img/product-2.png")
           <picture>
             <source media="(min-width:768px)" srcset="img/product-2.png">
             <source media="(max-width:768px)" srcset="img/product-1-small.png">
             <img data-src="img/product-2.png" alt="Agave image 1">
           </picture>
-          //-img.lazy(data-src="img/product-2.png" alt="Agave image 3")
+          <video loop muted playsinline webkit-playsinline autoplay preload="auto" controls poster="img/product-0.png">
+            <source src="img/video.webm" type="video/webm">
+            <source src="img/video.mp4" type="video/mp4">
+          </video>
         li.product__el.swiper-slide(data-fs-full="img/product-3.png") 
           <picture>
             <source media="(min-width:768px)" srcset="img/product-3.png">
             <source media="(max-width:768px)" srcset="img/product-1-small.png">
             <img data-src="img/product-3.png" alt="Agave image 1">
           </picture>
-          //-img.lazy(data-src="img/product-3.png" alt="Agave image 4" )
         li.product__el.swiper-slide(data-fs-full="img/product-4.png")
           <picture>
             <source media="(min-width:768px)" srcset="img/product-4.png">
             <source media="(max-width:768px)" srcset="img/product-1-small.png">
             <img data-src="img/product-4.png" alt="Agave image 1">
           </picture>
-          //-img.lazy(data-src="img/product-4.png" alt="Agave image 5" )
         li.product__el.swiper-slide(data-fs-full="img/product-5.png")
           <picture>
             <source media="(min-width:768px)" srcset="img/product-5.png">
             <source media="(max-width:768px)" srcset="img/product-1-small.png">
             <img data-src="img/product-5.png" alt="Agave image 1">
           </picture>
-          //-img.lazy(data-src="img/product-5.png" alt="Agave image 6" )
       .swiper-pagination
     .product__block.product__block_active
       .product__price   
@@ -121,7 +123,10 @@ a.email-block.header__sale-button.slide-button_icon.slide-button.header__menu-it
 
 
 
-
+//- <video loop muted playsinline webkit-playsinline autoplay preload="auto" controls   ="img/product-0.png">
+//-     <source src="video/video.webm" type="video/webm">
+//-     <source src="video/video.mp4" type="video/mp4">
+//- </video>
 //- .fancy-container
 //-   .mb-14.grid.gap-2(id="productContainer")
 //-     .f-carousel(id="productCarousel")

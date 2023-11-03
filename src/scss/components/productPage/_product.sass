@@ -236,9 +236,10 @@
 
 .product__el
   cursor: pointer
+  // height: aCalc(1189)
 
-.product__el, .product__el-mobile
-  max-width: aCalc(1189)
+// .product__el, .product__el-mobile
+//   max-width: aCalc(1189)
   width: 100%
   +r($sm)
     max-width: 100%
@@ -247,19 +248,23 @@
   display: grid
   justify-content: center
   align-items: center
+  background-color: #F9F9F9
 
 .product__el picture
   max-width: max-content
   display: block
   margin: 0 auto
 
+.product__el video
+  height: auto
+  width: aCalc(1189)
+
 .product__el img
   object-fit: cover
+  max-width: aCalc(1189)
   width: 100%
   +r($sm)
-    // object-fit: cover
     background-position: center
-    // max-height: 375px 
     object-fit: contain
     max-width: 231px
     width: 100%
