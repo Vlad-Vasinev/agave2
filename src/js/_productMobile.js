@@ -76,3 +76,16 @@ let priceBlock = document.querySelector('.product__price-block')
 if( isMobile() && priceBlock) {
   document.querySelector('body').style.paddingBottom = "56px"
 }
+
+let productIconEl = document.querySelectorAll('.product__info-icon');
+
+productIconEl.forEach(element => {
+  if(element.getAttribute('src') === "") {
+    console.log('1')
+    element.style.display = "none"
+    element.parentNode.style.paddingLeft = "0"
+  }
+  else {
+    console.log('2')
+  }
+});
