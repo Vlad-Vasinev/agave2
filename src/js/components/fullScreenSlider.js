@@ -93,7 +93,6 @@ export default class fsSlider {
             });
             document.querySelectorAll('.zoo-item').forEach((el) => {
               //el.querySelector(".zoo-img").removeAttribute('cursor');
-              console.log(el.querySelector(".zoo-img"))
               el.querySelector(".zoo-img").style.cursor = "url('../../img/circle-inside.png'), auto"
             })
               // el.querySelector(".zoo-img").forEach((element) => {
