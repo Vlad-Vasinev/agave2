@@ -72,19 +72,7 @@ if (isTablet() || isDesktop()) {
 
 }
 
-
-//mouseMove()
-// let counter = 20;
-// var whalf = window.innerHeight / 2;
-
-// function mouseMove() {
-//   document.onmousemove = function (event) {
-//     if (event.pageY < whalf && counter <= 500) {
-//       document.querySelector('.fullscreen-slider__slide.swiper-slide-active img').style = `transform: translate3d(${0}, ${counter + 'px'}, ${0});`
-//       counter += 30;
-//     } else if (event.pageY > whalf && counter >= -500) {
-//       document.querySelector('.fullscreen-slider__slide.swiper-slide-active img').style = `transform: translate3d(${0}, ${counter + 'px'}, ${0});`
-//       counter -= 30;
-//     }
-//   };
-// } .product__slider.swiper
+let priceBlock = document.querySelector('.product__price-block')
+if( isMobile() && priceBlock) {
+  document.querySelector('body').style.paddingBottom = "56px"
+}
