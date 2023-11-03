@@ -5,16 +5,8 @@
 //     padding-top: 118px
 
 .catalog__title
-  // color: #0E0E0E
   text-align: center
-  // font-size: aCalc(250)
-  // font-style: normal
-  // font-weight: 300
-  // line-height: normal
-  // text-transform: uppercase
   +r($sm)
-    // font-size: 50px
-    // font-weight: 300
     margin-bottom: 16px
 
 .catalog__list
@@ -22,7 +14,7 @@
   display: grid
   justify-content: center
   grid-template-columns: repeat(4,1fr)
-  gap: aCalc(20) aCalc(24)
+  gap: aCalc(10) aCalc(10)
   margin-bottom: aCalc(120)
   +r($sm)
     grid-gap: 7px
@@ -31,6 +23,7 @@
 
 .catalog__el
   cursor: pointer
+  border-radius: aCalc(12)
   background-color: #F9F9F9
   min-height: aCalc(650)
   +r($sm)
