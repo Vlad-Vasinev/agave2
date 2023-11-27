@@ -5,6 +5,11 @@ window.isTablet = isTablet;
 import fsSlider from "../js/components/fullScreenSlider";
 
 if (isMobile()) {
+
+  document.querySelectorAll('video').forEach((el) => {
+    el.removeAttribute('controls')
+  })
+
   document.querySelector(".product__slider").classList.add("swiper");
   document.querySelector(".product__content").classList.add("swiper-wrapper");
 
@@ -14,9 +19,9 @@ if (isMobile()) {
     allowTouchMove: true,
     preloadImages: false,
     direction: "horizontal",
-    autoplay: {
-      delay: 2000,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    // },
     loop: true,
     pagination: {
       el: ".swiper-pagination",

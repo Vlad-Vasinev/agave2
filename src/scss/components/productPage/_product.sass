@@ -185,22 +185,26 @@
   .slide-button_icon.slide-button.first-shop
     margin-right: aCalc(8)
     background-color: #255AF6
+    span
+      color: #ffffff
     &::after
       background-image: url('../../img/ozon.svg')
     +r($sm)
       margin-right: 8px
     &:hover
       background-color: #2151DE
-      span
-        color: #ffffff
+      // span
+      //   color: #ffffff
   .slide-button_icon.slide-button.second-shop
+    span
+      color: #000000
     &::after
       background-image: url('../../img/market.svg')
     background-color: #F7CE46
     &:hover
       background-color: #F1C430
-      span
-        color: #ffffff
+      // span
+      //   color: #ffffff
 
 .product__content, .product__slider
   max-width: aCalc(1189)
@@ -258,6 +262,11 @@
 .product__el video
   height: auto
   width: aCalc(1189)
+  +r($sm)
+    width: 100%
+    //height: auto
+    height: 375px
+    object-fit: cover
 
 .product__el img
   object-fit: cover
@@ -304,7 +313,7 @@
   max-width: aCalc(94)
   width: 100%
   text-align: center
-  padding: aCalc(17) aCalc(12)
+  padding: aCalc(15) aCalc(12)
   max-height: aCalc(52)
   // height: auto
   font-size: aCalc(18)
@@ -431,6 +440,18 @@
     font-size: 16px
     margin-bottom: 16px
 
+.product__description-more
+  margin-top: aCalc(16)
+  color: #006837
+  font-size: aCalc(18)
+  font-style: normal
+  font-weight: 400
+  line-height: aCalc(26)
+  +r($sm)
+    margin-top: 16px
+    font-size: 14px
+    line-height: 20px
+
 .product__properties
   max-width: aCalc(572)
   width: 100%
@@ -461,7 +482,13 @@
 .product__properties-el div
   max-width: aCalc(274)
   width: 100%
+  font-size: aCalc(14)
+  font-style: normal
+  font-weight: 400
+  line-height: aCalc(18)
   +r($sm)
+    font-size: 14px
+    line-height: 20px
     max-width: 274px
 
 // .slider-mobile.product__slider
@@ -553,10 +580,19 @@
   border: 2px solid #006837
 
 .zoo-img:hover
-  cursor: url('../../../img/circle-inside.png'), auto !important
+  cursor: url('../../../img/svg/black-plus.svg'), auto !important
 
 .zoo-img
   width: 90px
   height: 90px
   object-fit: cover
-  cursor: url("../../../img/circle-inside.png"), auto !important
+  cursor: url("../../../img/svg/black-plus.svg"), auto !important
+
+// .zoo-img:hover
+//   cursor: url('../../../img/circle-inside.png'), auto !important
+
+// .zoo-img
+//   width: 90px
+//   height: 90px
+//   object-fit: cover
+//   cursor: url("../../../img/circle-inside.png"), auto !important
