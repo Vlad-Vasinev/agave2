@@ -3,6 +3,8 @@ window.isMobile = isMobile;
 window.isDesktop = isDesktop;
 window.isTablet = isTablet;
 import fsSlider from "../js/components/fullScreenSlider";
+import { disableScroll } from "./functions/disable-scroll";
+import { enableScroll } from "./functions/enable-scroll";
 
 if (isMobile()) {
 
@@ -106,3 +108,18 @@ productEl.forEach(element => {
     //   console.log('smth is here')
     // }
 });
+
+let activePopup = document.querySelectorAll('.product__description-popup')
+document.querySelectorAll('.product__description-more').forEach((el, index) => {
+  el.addEventListener('click', () => {
+    disableScroll()
+    activePopup[index].classList.add('product__description_active')
+  })
+})
+
+document.querySelectorAll('.product__description-close').forEach((el, index) => {
+  el.addEventListener('click', () => {
+    enableScroll()
+    activePopup[index].classList.remove('product__description_active')
+  })
+})

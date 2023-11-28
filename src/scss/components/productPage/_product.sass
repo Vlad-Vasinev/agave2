@@ -2,6 +2,100 @@
 .product
   position: relative
 
+.product__description-popup
+  overflow: scroll
+  max-width: aCalc(807)
+  width: 100%
+  top: 0
+  transform: translateX(100%)
+  position: fixed
+  z-index: 199
+  height: 100vh
+  right: 0
+  background-color: #ffffff
+  padding: aCalc(80)
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), -webkit-transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)
+  +r($sm)
+    max-height: 100vh
+    top: 68px
+    padding: 50px 16px 60px
+    max-width: 100%
+    // max-width: 375px
+  .fullscreen-slider__close
+    position: relative
+    z-index: 200
+    margin-left: auto
+    margin-right: 0
+    max-width: aCalc(32)
+    background-color: transparent
+    width: 100%
+    +r($sm)
+      margin-right: 16px
+  .product__properties-title.secondary-title-h2 
+    font-size: aCalc(32)
+    font-style: normal
+    font-weight: 400
+    line-height: aCalc(40)
+    +r($sm)
+      font-size: 24px
+      line-height: 32px
+  .product__properties-list
+    margin-bottom: aCalc(40)
+    +r($sm)
+      margin-bottom: 24px
+  .product__properties-el + .product__properties-el
+    margin-top: aCalc(4)
+    +r($sm)
+      margin-top: 8px
+  .product__properties .product__properties-title.secondary-title-h2
+    font-size: aCalc(18)
+    font-style: normal
+    font-weight: 400
+    line-height: aCalc(26)
+    +r($sm)
+      font-size: 16px
+      line-height: 24px
+
+.product__description-info 
+  color: #939393
+  font-size: aCalc(12)
+  font-style: normal
+  font-weight: 400
+  line-height: aCalc(16)
+  text-transform: uppercase
+  +r($sm)
+    font-size: aCalc(11)
+    font-style: normal
+    font-weight: 400
+    line-height: aCalc(15)
+    text-transform: uppercase
+
+.product__description-close
+  cursor: pointer
+  svg
+    transition: .3s
+  &:hover svg
+    transform: rotate(90deg)
+
+.product__description_active
+    transform: translateX(0)
+
+.product__description__title
+  margin-bottom: aCalc(24)
+  +r($sm)
+    margin-bottom: 24px
+
+.product__description-text p
+  margin-bottom: aCalc(26)
+  +r($sm)
+    margin-bottom: 26px
+
+// .product__description-popup:nth-child(1)
+//   z-index: 100
+
+// .product__description-popup:nth-child(2)
+//   z-index: 99
+
 .product__popup
   position: fixed
   width: 100vw
@@ -447,6 +541,10 @@
   font-style: normal
   font-weight: 400
   line-height: aCalc(26)
+  border-bottom: 1px solid transparent
+  transition: .3s
+  &:hover
+    border-bottom: 1px solid #006837
   +r($sm)
     margin-top: 16px
     font-size: 14px

@@ -123,7 +123,7 @@ button, .button,  .button_medium
   color: #fff
   font-weight: 600
   +aPadd(20, 32)
-  +aProp(border-radius, 12)
+  //+aProp(border-radius, 12)
   min-width: max-content
   width: max-content
   flex-shrink: 0
@@ -344,6 +344,25 @@ button, .button,  .button_medium
         &::after
           background: #9a9a9a
         
+.h1-primary
+  color: #000000
+  font-size: aCalc(32)
+  font-style: normal
+  font-weight: 400
+  line-height: aCalc(40)
+  +r($sm)
+    font-size: 24px
+    line-height: 32px
+
+.text-primary
+  color: #000000
+  font-size: aCalc(18)
+  font-style: normal
+  font-weight: 400
+  line-height: aCalc(24)
+  +r($sm)
+    font-size: 16px
+    line-height: 24px
 
 @import "inputs"
 @import "slideButton"

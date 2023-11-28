@@ -21,7 +21,6 @@ closeMobile.addEventListener("click", () => {
 const headerInner = document.querySelector('.header-mobile__inner'); 
 const logo = document.querySelector('.logo');
 if(isMobile()) {
-  console.log('is-mobile catalog')
 
   let headerMobile = document.querySelector('.header-mobile');
   const observer = new IntersectionObserver(
@@ -38,7 +37,5 @@ if(isMobile()) {
 
 }
 else if(!isMobile()) {
-  console.log("not mobile")
-}
 
-console.log('agave test console');
+}

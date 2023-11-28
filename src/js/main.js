@@ -12,4 +12,4 @@ import './_headerMobile';
 import './_headerHoverMenu';
 import './_product';
 import './_productMobile';
-import './_productFancy';
+// import './_productFancy';
