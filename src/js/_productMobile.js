@@ -112,14 +112,20 @@ productEl.forEach(element => {
 let activePopup = document.querySelectorAll('.product__description-popup')
 document.querySelectorAll('.product__description-more').forEach((el, index) => {
   el.addEventListener('click', () => {
-    disableScroll()
+    // if(isDesktop()) {
+      disableScroll()
+    // }
+    document.querySelector('.product__description-bg').classList.add('bg-active')
     activePopup[index].classList.add('product__description_active')
   })
 })
 
 document.querySelectorAll('.product__description-close').forEach((el, index) => {
   el.addEventListener('click', () => {
-    enableScroll()
+    // if(isDesktop()) {
+      enableScroll()
+    // }
+    document.querySelector('.product__description-bg').classList.remove('bg-active')
     activePopup[index].classList.remove('product__description_active')
   })
 })

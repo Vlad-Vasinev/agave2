@@ -1,14 +1,35 @@
 
 .product
   position: relative
+  overflow-x: hidden
+
+.product__description-bg
+  top: 0
+  width: 100%
+  position: fixed
+  transform: translateX(100%)
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), -webkit-transform 0.25s cubic-bezier(0.22, 1, 0.36, 1)
+  height: 100vh
+  background: rgba(0, 0, 0, 0.25)
+  +r($sm)
+    display: none
+
+.bg-active
+  z-index: 198
+  transform: translateX(0)
 
 .product__description-popup
   overflow: scroll
   max-width: aCalc(807)
   width: 100%
   top: 0
+  bottom: 0
+  overflow: auto
   transform: translateX(100%)
   position: fixed
+  overflow: scroll
+  -webkit-overflow-scrolling: touch
+  //position: absolute
   z-index: 199
   height: 100vh
   right: 0
@@ -16,7 +37,8 @@
   padding: aCalc(80)
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), -webkit-transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)
   +r($sm)
-    max-height: 100vh
+    //height: 100vh
+    //max-height: auto
     top: 68px
     padding: 50px 16px 60px
     max-width: 100%
