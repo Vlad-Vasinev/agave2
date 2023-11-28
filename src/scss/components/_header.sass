@@ -525,13 +525,57 @@ button.slide-button
   min-height: 325px
   z-index: 400
   transiton: all .3s
+  .container
+    +r($sm)
+      padding: 0 24px
+  .mobile-menu__buttons
+    +r($sm)
+      display: flex
+      flex-direction: column
   .header__info-link + .header__info-link
     +r($sm)
       padding-top: 4px
-  .header__info-el.header__info-catalog
+  .header__info-el.header__info-shop
+    +r($sm)
+      padding: 0
+      margin-top: 0
+      margin-bottom: 40px
+  .header__info-link.primary-title-h2
+    +r($sm)
+      //margin-left: 0
+  .header__info-el.header__info-shop .header__info-link 
+    +r($sm)
+      padding: 16px
+      border-radius: 16px
+      max-width: 160px
+      min-height: 112px
+      width: 100%
+    div 
+      +r($sm)
+        font-size: 18px
+        line-height: 24px
+    img 
+      +r($sm)
+        max-width: 48px
+        height: 48px
+  .header__info-el.header__info-shop .header__info-link:last-child
+    margin-left: 7px
+  .address__el + .address__el
+    +r($sm)
+      margin-top: 12px
+  .address__el-subtitle
+    +r($sm) 
+      margin-bottom: 2px
+      font-size: 11px
+      line-height: 15px
+  .address__el-title
+    font-size: 18px
+    line-height: 24px
+  .header__info-el
     +r($sm)
       max-width: 100%
       margin-top: 142px
+      margin-bottom: 40px
       visibility: visible
       opacity: 1
       position: relative
