@@ -7,16 +7,20 @@
   top: 0
   width: 100%
   position: fixed
-  transform: translateX(100%)
-  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), -webkit-transform 0.25s cubic-bezier(0.22, 1, 0.36, 1)
+  //transform: translateX(100%)
+  left: 0
+  opacity: 0
+  //transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), -webkit-transform 0.25s cubic-bezier(0.22, 1, 0.36, 1)
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), -webkit-opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1)
   height: 100vh
   background: rgba(0, 0, 0, 0.25)
   +r($sm)
     display: none
 
 .bg-active
-  z-index: 198
-  transform: translateX(0)
+  z-index: 1988
+  //transform: translateX(0)
+  opacity: 1
 
 .product__description-popup
   max-width: aCalc(807)
