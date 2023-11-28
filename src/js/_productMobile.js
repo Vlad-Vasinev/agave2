@@ -11,7 +11,7 @@ if (isMobile()) {
   document.querySelectorAll('video').forEach((el) => {
     el.removeAttribute('controls')
   })
-
+  
   document.querySelector(".product__slider").classList.add("swiper");
   document.querySelector(".product__content").classList.add("swiper-wrapper");
 
@@ -88,25 +88,17 @@ let productIconEl = document.querySelectorAll('.product__info-icon');
 
 productIconEl.forEach(element => {
   if(element.getAttribute('src') === "") {
-    // console.log('1')
     element.style.display = "none"
     element.parentNode.style.paddingLeft = "0"
   }
-  // else {
-  //   console.log('2')
-  // }
 });
 
 let productEl = document.querySelectorAll('.product__el')
 
 productEl.forEach(element => {
     if (element.querySelector('video')) {
-      // console.log('video is here')
       element.querySelector('picture').style.display = "none"
     }
-    // else {
-    //   console.log('smth is here')
-    // }
 });
 
 let activePopup = document.querySelectorAll('.product__description-popup')
