@@ -241,28 +241,6 @@
   text-transform: uppercase
   margin-bottom: aCalc(2)
 
-// .header__info
-//   display: flex
-//   justify-content: space-between
-//   max-width: aCalc(572)
-//   width: 100%
-
-// .header__info-links
-//   max-width: aCalc(204)
-//   width: 100%
-
-// .menu__link-text
-//   color: #0E0E0E
-//   text-align: center
-//   font-size: aCalc(12)
-//   font-style: normal
-//   line-height: aCalc(16)
-//   text-transform: uppercase
-
-// .header__info-links
-//   display: flex
-//   justify-content: space-between
-
 .buttonM
   font-weight: 600
   +aProp(font-size, 18)
@@ -279,15 +257,6 @@
   +r($sm)
     font-size: 13px
     line-height: 18px
-
-// .enlarge-link::before
-//   content: ''
-//   position: absolute
-//   display: block
-//   top: -15px
-//   bottom: -15px
-//   right: -15px
-//   left: -15px
 
 .enlarge-link
   position: relative
@@ -513,7 +482,7 @@ button.slide-button
     display: block
 
 .mobile-menu
-  transform: translateX(-100%)
+  transform: translateY(-100%)
   visibility: hidden
   transition: visibility 0s 0.31s, transform 0.3s 0s, -webkit-transform 0.3s 0s
   width: 100%
@@ -523,7 +492,7 @@ button.slide-button
   background-color: #ffffff
   position: fixed
   min-height: 325px
-  z-index: 400
+  z-index: 199
   transiton: all .3s
   .container
     +r($sm)
@@ -535,6 +504,9 @@ button.slide-button
   .header__info-link + .header__info-link
     +r($sm)
       padding-top: 4px
+  .header__info-el.header__info-shop .header__info-link:first-child
+    +r($sm)
+      margin-left: 0
   .header__info-el.header__info-shop
     +r($sm)
       padding: 0
@@ -542,7 +514,6 @@ button.slide-button
       margin-bottom: 40px
   .header__info-link.primary-title-h2
     +r($sm)
-      //margin-left: 0
   .header__info-el.header__info-shop .header__info-link 
     +r($sm)
       padding: 16px
@@ -609,7 +580,7 @@ button.slide-button
 
 .mobile-menu_active
   visibility: visible
-  transform: translateX(0)
+  transform: translateY(0)
   transition: transform 0.4s, visibility 0s 0s, -webkit-transform 0.4s
 
 .mobile-menu__title 
@@ -641,12 +612,10 @@ button.slide-button
   display: none
   justify-content: space-between
   background-color: transparent
-  background-color:#ffffff
   padding: 10px 16px
   align-items: top
   position: fixed
   z-index: 200
-  // z-index: 300
   top: 0
   max-width: 736px
   left: 0
@@ -660,6 +629,7 @@ button.slide-button
 
 .header-mobile__inner.header-mobile_active 
   min-height: 68px
+  background-color: #ffffff
   .svg-main
     margin-bottom: 0
   .svg-text
@@ -700,17 +670,23 @@ button.slide-button
     height: 24px
 
 .mobile-email.header-mobile__email svg
-  width: 80px
-  height: 40px
+  width: 28px
+  height: 28px
+  pointer-events: none
 
 .mobile-email.header-mobile__email
   background-color: transparent
 
-.mobile-menu__button.close-btn
+.mobile-menu__button.close-btn svg
+  +r($sm)
+    width: 24px
+    height: 24px
 
 
 .mobile-menu__button
-
+  +r($sm)
+    top: 10px
+    right: 8px
 
 .header-mobile__close
   display: none

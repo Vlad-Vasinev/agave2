@@ -7,10 +7,8 @@
   top: 0
   width: 100%
   position: fixed
-  //transform: translateX(100%)
   left: 0
   opacity: 0
-  //transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), -webkit-transform 0.25s cubic-bezier(0.22, 1, 0.36, 1)
   transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), -webkit-opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1)
   height: 100vh
   background: rgba(0, 0, 0, 0.25)
@@ -19,7 +17,6 @@
 
 .bg-active
   z-index: 1988
-  //transform: translateX(0)
   opacity: 1
 
 .product__description-popup
@@ -110,12 +107,6 @@
   margin-bottom: aCalc(26)
   +r($sm)
     margin-bottom: 26px
-
-// .product__description-popup:nth-child(1)
-//   z-index: 100
-
-// .product__description-popup:nth-child(2)
-//   z-index: 99
 
 .product__popup
   position: fixed
@@ -308,8 +299,6 @@
       margin-right: 8px
     &:hover
       background-color: #2151DE
-      // span
-      //   color: #ffffff
   .slide-button_icon.slide-button.second-shop
     span
       color: #000000
@@ -318,8 +307,6 @@
     background-color: #F7CE46
     &:hover
       background-color: #F1C430
-      // span
-      //   color: #ffffff
 
 .product__content, .product__slider
   max-width: aCalc(1189)
@@ -355,10 +342,6 @@
 
 .product__el
   cursor: pointer
-  // height: aCalc(1189)
-
-// .product__el, .product__el-mobile
-//   max-width: aCalc(1189)
   width: 100%
   +r($sm)
     max-width: 100%
@@ -410,11 +393,8 @@
   +r($sm)
     max-width: 100%
     position: fixed
-    //max-height: 60px
     max-height: 86px
-    z-index: 200
-    // z-index: 500
-    //padding: 8px 16px
+    z-index: 198
     padding: 20px 16px
     bottom: 0
     left: 0
@@ -430,13 +410,11 @@
   text-align: center
   padding: aCalc(15) aCalc(12)
   max-height: aCalc(52)
-  // height: auto
   font-size: aCalc(18)
   border-radius: aCalc(12)
   margin-right: aCalc(8)
   background-color: #F0F0F0
   +r($sm)
-    // max-width: 81px
     max-width: 100%
     width: 100%
     font-size: 16px
@@ -444,7 +422,6 @@
     padding: 14px 12px
     border-radius: 12px
     margin-right: 8px
-    // min-height: auto
 
 .product__price-btn
   color: #FFF
@@ -610,16 +587,6 @@
     line-height: 20px
     max-width: 274px
 
-// .slider-mobile.product__slider
-//   display: none
-//   +r($sm)
-//     display: block
-
-// .slider-desktop.product__slider
-//   display: block
-//   +r($sm)
-//     display: none
-
 .product__slider 
   +r($sm)
     height: 375px
@@ -674,9 +641,6 @@
 .gallery-thumbs__el.swiper-slide.swiper-slide-thumb-active
   border: aCalc(2) solid #006837
 
-// .swiper-slide-active img
-//   transition-duration: .1s
-
 .swiper-slide.fullscreen-slider__slide img
   transition: 1.2s linear
 
@@ -706,12 +670,3 @@
   height: 90px
   object-fit: cover
   cursor: url("../../../img/svg/black-plus.svg"), auto !important
-
-// .zoo-img:hover
-//   cursor: url('../../../img/circle-inside.png'), auto !important
-
-// .zoo-img
-//   width: 90px
-//   height: 90px
-//   object-fit: cover
-//   cursor: url("../../../img/circle-inside.png"), auto !important
