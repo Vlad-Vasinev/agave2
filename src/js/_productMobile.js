@@ -5,6 +5,7 @@ window.isTablet = isTablet;
 import fsSlider from "../js/components/fullScreenSlider";
 import { disableScroll } from "./functions/disable-scroll";
 import { enableScroll } from "./functions/enable-scroll";
+// import { DllReferencePlugin } from "webpack";
 
 if (isMobile()) {
 
@@ -21,9 +22,9 @@ if (isMobile()) {
     allowTouchMove: true,
     preloadImages: false,
     direction: "horizontal",
-    // autoplay: {
-    //   delay: 2000,
-    // },
+    autoplay: {
+      delay: 2000,
+    },
     loop: true,
     pagination: {
       el: ".swiper-pagination",
@@ -101,23 +102,56 @@ productEl.forEach(element => {
     }
 });
 
+let productText = document.querySelector('.product__block .product__description p')
+let productTextPopup = document.querySelector('.product .product__description-popup.popup-text .product__description-text')
+let productProp = document.querySelector('.product__block .product__properties')
+let productPropPopup = document.querySelector('.product .product__description-popup.popup-properties .product__properties')
+
+let propertiesList = document.querySelectorAll('.product__block .product__properties-list')
+let propertiesTitle = document.querySelectorAll('.product__block .product__properties .product__properties-title')
+
+if(productText.innerHTML.length > 233) {
+  productTextPopup.innerHTML = productText.innerHTML
+  let newString = productText.innerHTML.slice(0, 215)
+  productText.innerHTML = `${newString}...`
+}
+
+let newProps = null
+if(propertiesList.length > 1) {
+
+  document.querySelector('.product__block .product__description__title').style.display = "none"
+  document.querySelector('.product__block .product__description-info').style.display = "none"
+
+  newProps = productProp.innerHTML
+  propertiesList.forEach((el, index) => {
+    el.style.display = "none"
+  })
+  propertiesTitle.forEach((el) => {
+    el.style.display = "none"
+  })
+  propertiesList[0].style.display = 'block'
+  propertiesTitle[0].style.display = 'block'
+}
+
 let activePopup = document.querySelectorAll('.product__description-popup')
 document.querySelectorAll('.product__description-more').forEach((el, index) => {
   el.addEventListener('click', () => {
-    // if(isDesktop()) {
-      disableScroll()
-    // }
+    disableScroll()
     document.querySelector('.product__description-bg').classList.add('bg-active')
     activePopup[index].classList.add('product__description_active')
+
+    productPropPopup.innerHTML = newProps
+    document.querySelector('.product__description-popup.popup-properties .product__description__title').style.display = "block"
+    document.querySelector('.product__description-popup.popup-properties .product__description-info').style.display = "block"
+    productPropPopup.querySelector('button').style.display = "none"
   })
 })
 
 document.querySelectorAll('.product__description-close').forEach((el, index) => {
   el.addEventListener('click', () => {
-    // if(isDesktop()) {
-      enableScroll()
-    // }
+    enableScroll()
     document.querySelector('.product__description-bg').classList.remove('bg-active')
     activePopup[index].classList.remove('product__description_active')
   })
 })
+

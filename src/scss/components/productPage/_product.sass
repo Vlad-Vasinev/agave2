@@ -19,6 +19,11 @@
   z-index: 1988
   opacity: 1
 
+.product__properties-list
+  margin-bottom: aCalc(40)
+  +r($sm)
+    margin-bottom: 24px
+
 .product__description-popup
   max-width: aCalc(807)
   width: 100%
@@ -57,10 +62,10 @@
     +r($sm)
       font-size: 24px
       line-height: 32px
-  .product__properties-list
-    margin-bottom: aCalc(40)
-    +r($sm)
-      margin-bottom: 24px
+  // .product__properties-list
+  //   margin-bottom: aCalc(40)
+  //   +r($sm)
+  //     margin-bottom: 24px
   .product__properties-el + .product__properties-el
     margin-top: aCalc(4)
     +r($sm)
