@@ -111,17 +111,17 @@ let propertiesList = document.querySelectorAll('.product__block .product__proper
 let propertiesTitle = document.querySelectorAll('.product__block .product__properties .product__properties-title')
 
 if(productText.innerHTML.length > 233) {
-  productTextPopup.innerHTML = productText.innerHTML
+  //productTextPopup.innerHTML = productText.innerHTML
+
+  document.querySelectorAll('.product__block .product__description p').forEach((el, index) => {
+    let newP = el.cloneNode(true)
+    let newTitle = el.parentElement.querySelectorAll('h2')[index].cloneNode(true)
+    productTextPopup.appendChild(newTitle)
+    productTextPopup.appendChild(newP)
+  })
 
   let newString = productText.innerHTML.slice(0, 215)
   productText.innerHTML = `${newString}...`
-
-  // document.querySelectorAll('.product__block .product__description p').forEach((el, index) => {
-  //   let newEll = el.parentElement.querySelector('p').cloneNode()
-  //   console.log(newEll)
-  //   productTextPopup.appendChild(newEll)
-  // })
-
 }
 
 if(document.querySelectorAll('.product__block .product__description p').length > 1) {
