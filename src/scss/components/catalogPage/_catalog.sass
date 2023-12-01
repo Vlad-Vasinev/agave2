@@ -164,12 +164,13 @@
   margin-bottom: aCalc(120)
 
 .catalog__el.catalog__el_specialFirst
-  grid-column-start: 1
-  grid-column-end: 3
+  grid-column: span 2
   +r($sm)
-    grid-column-start: initial
-    grid-column-end: initial
-
+    min-height: 359px
+    grid-column: span 2
+  .catalog__link
+    +r($sm)
+      min-height: 359px !important
 .catalog__el.catalog__el_specialLast
   grid-column-start: 3
   grid-column-end: 5

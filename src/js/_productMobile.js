@@ -110,8 +110,8 @@ let productPropPopup = document.querySelector('.product .product__description-po
 let propertiesList = document.querySelectorAll('.product__block .product__properties-list')
 let propertiesTitle = document.querySelectorAll('.product__block .product__properties .product__properties-title')
 
-if(productText.innerHTML.length > 233) {
-  //productTextPopup.innerHTML = productText.innerHTML
+if(productText) {
+  if(productText.innerHTML.length > 233) {
 
   document.querySelectorAll('.product__block .product__description p').forEach((el, index) => {
     let newP = el.cloneNode(true)
@@ -122,6 +122,7 @@ if(productText.innerHTML.length > 233) {
 
   let newString = productText.innerHTML.slice(0, 215)
   productText.innerHTML = `${newString}...`
+  }
 }
 
 if(document.querySelectorAll('.product__block .product__description p').length > 1) {
