@@ -112,15 +112,36 @@ let propertiesTitle = document.querySelectorAll('.product__block .product__prope
 
 if(productText.innerHTML.length > 233) {
   productTextPopup.innerHTML = productText.innerHTML
+
   let newString = productText.innerHTML.slice(0, 215)
   productText.innerHTML = `${newString}...`
+
+  // document.querySelectorAll('.product__block .product__description p').forEach((el, index) => {
+  //   let newEll = el.parentElement.querySelector('p').cloneNode()
+  //   console.log(newEll)
+  //   productTextPopup.appendChild(newEll)
+  // })
+
+}
+
+if(document.querySelectorAll('.product__block .product__description p').length > 1) {
+  document.querySelectorAll('.product__block .product__description p').forEach((el, index) => {
+    el.style.display = "none"
+    document.querySelectorAll('.product__block .product__description h2')[index].style.display = "none"
+  })
+  document.querySelectorAll('.product__block .product__description p')[0].style.display = "block"
+  document.querySelectorAll('.product__block .product__description h2')[0].style.display = "block"
 }
 
 let newProps = null
 if(propertiesList.length > 1) {
 
-  document.querySelector('.product__block .product__description__title').style.display = "none"
-  document.querySelector('.product__block .product__description-info').style.display = "none"
+  document.querySelectorAll('.product__block .product__description__title').forEach((el) => {
+    el.style.display = "none"
+  }) 
+  document.querySelectorAll('.product__block .product__description-info').forEach((el) => {
+    el.style.display = "none"
+  }) 
 
   newProps = productProp.innerHTML
   propertiesList.forEach((el, index) => {
@@ -141,8 +162,12 @@ document.querySelectorAll('.product__description-more').forEach((el, index) => {
     activePopup[index].classList.add('product__description_active')
 
     productPropPopup.innerHTML = newProps
-    document.querySelector('.product__description-popup.popup-properties .product__description__title').style.display = "block"
-    document.querySelector('.product__description-popup.popup-properties .product__description-info').style.display = "block"
+    document.querySelectorAll('.product__description-popup.popup-properties .product__description__title').forEach((el) => {
+      el.style.display = "block"
+    })
+    document.querySelectorAll('.product__description-popup.popup-properties .product__description-info').forEach((el) => {
+      el.style.display = "block"
+    }) 
     productPropPopup.querySelector('button').style.display = "none"
   })
 })
