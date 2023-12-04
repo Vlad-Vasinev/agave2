@@ -16,6 +16,10 @@ if (isMobile()) {
   document.querySelector(".product__slider").classList.add("swiper");
   document.querySelector(".product__content").classList.add("swiper-wrapper");
 
+  document.querySelector(".product__content").querySelectorAll('video').forEach((el) => {
+    el.removeAttribute('controls')
+  })  
+
   new Swiper(".product__slider", {
     slidesPerView: 1,
     zoom: true,
