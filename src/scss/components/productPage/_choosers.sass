@@ -34,9 +34,9 @@
       transition: .3s
       border: 1px solid transparent 
       position: relative
-      &::before
+      span 
         position: absolute
-        content: ""
+        //content: ""
         width: 112%
         height: 123%
         border-radius: aCalc(32)
@@ -51,16 +51,29 @@
           border-radius: 28px
           left: -2.7px
           top: -3px
+      // &::before
+      //   position: absolute
+      //   content: ""
+      //   width: 112%
+      //   height: 123%
+      //   border-radius: aCalc(32)
+      //   left: aCalc(-3)
+      //   top: aCalc(-3)
+      //   background-color: transparent 
+      //   border: 1px solid #006837 
+      //   display: none
+      //   +r($sm)
+      //     width: 110%
+      //     height: 122%
+      //     border-radius: 28px
+      //     left: -2.7px
+      //     top: -3px
       +r($sm)
         width: 28px
         height: 28px
         border-radius: 28px
-      &:focus
-        width: aCalc(56)
-        +r($sm)
-          width: 56px
-        &::before
-          display: block
+        // &::before
+        //   display: block
           //width: aCalc(56)
         //border: 1px solid #006837 
     button + button 
@@ -92,9 +105,35 @@
         line-height: 15px
       &:hover
         color: #006837
-      &:focus
-        border: 1px solid #006837
     button + button 
       margin-left: aCalc(8)
       +r($sm)
         margin-left: 8px
+
+.choosers__el-one_active
+  width: aCalc(56) !important
+  +r($sm)
+    width: 56px !important
+  // &::before
+  //   position: absolute
+  //   content: ""
+  //   width: 112%
+  //   height: 123%
+  //   border-radius: aCalc(32)
+  //   left: aCalc(-3)
+  //   top: aCalc(-3)
+  //   background-color: transparent 
+  //   border: 1px solid #006837 
+  //   display: none
+  //   +r($sm)
+  //     width: 110%
+  //     height: 122%
+  //     border-radius: 28px
+  //     left: -2.7px
+  //     top: -3px
+
+.choosers__el_show
+  display: block !important
+
+.choosers__el-two_active
+  border: 1px solid #006837 !important
