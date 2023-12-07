@@ -1,8 +1,11 @@
 
 .primary-content 
   display: flex
+  height: 100vh
+  //background-color: #DFD7CC
   justify-content: center
   margin-bottom: aCalc(100)
+  overflow: hidden
 
 .content__info
   box-sizing: border-box
@@ -78,3 +81,185 @@
 .plus-btn svg
   width: aCalc(25)
   height: aCalc(25)
+
+//slider
+.ordinary-slider
+  &__el
+    display: grid
+    justify-content: center
+    align-items: center
+    width: auto
+    +r($sm)
+      max-width: 146px
+      width: 100%
+  &__el.swiper-slide
+    display: flex
+
+/////R
+.ordinary-slider
+  .swiper-container
+    width: 100%
+    height: 100%
+    padding-top: aCalc(32)
+  position: static
+  //margin-bottom: aCalc(120)
+  &__el
+    display: grid
+    justify-content: center
+    align-items: center
+    width: auto
+    .slider__el-name
+      text-align: center
+      margin-top: aCalc(38)
+      font-size: aCalc(18)
+      font-style: normal
+      font-weight: 500
+      line-height: aCalc(24)
+      +r($sm)
+        font-size: 14px
+        line-height: 18px
+    img
+      //border-radius: aCalc(4)
+      min-height: aCalc(175)
+      height: 100%
+      display: block
+      width: auto
+      object-fit: contain
+      +r($sm)
+        width: 81px
+        height: 95px
+    +r($sm)
+      border-radius: 4px
+      height: auto
+
+  .slider-navigation-next, .slider-navigation-prev
+    position: initial
+    bottom: 0
+  .slider-navigation-next
+    transform: translateY(0) rotate(180deg)
+    position: initial
+
+  &__el.swiper-slide
+    transition: .3s
+    cursor: pointer
+    // &:hover
+    //   transform: translateY(-10%)
+    +r($sm)
+      width: auto
+
+  .swiper-pagination
+    width: auto
+    height: auto
+    left: 0
+    right: 0
+    margin: 0 auto
+    transform: translateY(50%)
+    bottom: aCalc(-41)
+    +r($sm)
+      bottom: -37px
+
+  .swiper-pagination-bullet
+    width: aCalc(6)
+    height: aCalc(6)
+    background-color: #000000
+    opacity: 0.5
+    +r($sm)
+      width: 6px
+      height: 6px
+  .swiper-pagination-bullet.swiper-pagination-bullet-active
+    opacity: 1
+    position: relative
+    top: aCalc(1)
+    width: aCalc(8)
+    height: aCalc(8)
+    +r($sm)
+      width: 8px
+      height: 8px
+    +r($sm)
+      top: aCalc(2)
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+    margin: 0 aCalc(12)
+    +r($sm)
+      margin: 0 7px
+  .slider-navigation-next, .slider-navigation-prev
+    background-color: transparent
+    position: absolute
+    bottom: aCalc(-45)
+    transform: translateY(50%)
+    z-index: 99
+    +r($sm)
+      bottom: -28px
+      transform: translateY(50%)
+    svg
+      width: aCalc(24)
+      height: aCalc(24)
+      +r($sm)
+        width: 24px
+        height: 24px
+  .slider-navigation-prev
+    left: 39%
+    +r($sm)
+      bottom: -37px
+      left: 0
+      svg
+        width: 24px !important
+        height: 24px !important
+    +r($ms)
+      left: 0
+  .slider-navigation-next.slide-button
+    transform: rotate(0deg)
+    background-color: #F3F3F3
+    border-radius: aCalc(12)
+    width: aCalc(44)
+    height: aCalc(44)
+  .slider-navigation-prev.slide-button
+    transform: rotate(180deg)
+    margin-right: aCalc(8)
+    width: aCalc(44)
+    height: aCalc(44)
+    background-color: #F3F3F3
+    border-radius: aCalc(12)
+  .slider-navigation-next
+    transform: translateY(50%) rotate(90deg)
+    right: 39%
+    +r($sm)
+      bottom: -37px
+      right: 0
+      transform: translateY(50%) rotate(180deg)
+      svg
+        width: 24px !important
+        height: 24px !important
+    +r($ms)
+      right: 0
+  +r($sm)
+    margin-bottom: 0
+
+.swiper-container
+  min-height: aCalc(260)
+  height: 100%
+  overflow-x: hidden
+
+.ordinary-slider .slider-navigation-next, .ordinary-slider .slider-navigation-prev
+  transform: translateY(0)
+  position: initial
+
+.control-wrapper
+  position: absolute
+  left: 0
+  bottom: 0
+  margin-top: aCalc(21)
+  .swiper-pagination
+    +r($ms + 6)
+      transform: translateY(0)
+  +r($sm)
+    display: none
+    margin-top: 26px
+
+.control-wrapper__inner
+  display: flex
+  align-content: center
+  justify-content: center
+  +r($sm)
+    justify-content: space-between
+
+//slider

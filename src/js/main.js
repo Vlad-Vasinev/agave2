@@ -13,4 +13,5 @@ import './_headerHoverMenu';
 import './_product';
 import './_productMobile';
 import './_choosers';
+import './_mainSlider';
 // import './_productFancy';
