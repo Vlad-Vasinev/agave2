@@ -26,14 +26,26 @@ if (isMobile()) {
     allowTouchMove: true,
     preloadImages: false,
     direction: "horizontal",
-    autoplay: {
-      delay: 2000,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    // },
     loop: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
+    // breakpoints: {
+    //   320: {
+    //     autoplay: {
+    //       delay: false
+    //     }
+    //   },
+    //   768: {
+    //     autoplay: {
+    //       delay: 2000
+    //     }
+    //   }
+    // },
   });
   window.fsSlider = new fsSlider(document.querySelector(".fullscreen-slider"), {
     allowTouchMove: false,
