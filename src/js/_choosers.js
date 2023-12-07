@@ -1,7 +1,8 @@
 
 
 document.querySelectorAll('.choosers .choosers__el.choosers__el-two button').forEach((el) => {
-  el.addEventListener('click', () => {
+  el.addEventListener('click', (e) => {
+    console.log(e)
     el.classList.toggle('choosers__el-two_active')
   })
 })

@@ -54,12 +54,19 @@
   max-width: aCalc(650)
   width: 100%
   overflow: hidden
+  .catalog__link-info 
+    +r($sm)
+      max-width: max-content
+  +r($sm)
+    max-width: max-content
 
 .catalog__el.catalog__el_specialLast .catalog__link-inner
   margin: 0 auto
   max-width: aCalc(650)
   width: 100%
   overflow: hidden
+  +r($sm)
+    max-width: max-content
 
 .catalog__el.catalog__el_ordinary .catalog__link-inner
   display: grid
@@ -82,6 +89,16 @@
   height: 100%
   +r($sm)
     min-height: 247px
+    max-height: 414px
+
+.catalog__el.catalog__el_specialLast .catalog__link
+  +r($sm)
+    // min-height: 247px
+    min-height: 414px
+
+// .catalog__el.catalog__el_specialLast .catalog__link
+//   +r($sm)
+//     min-height: 414px
 
 .catalog__el img
   +r($sm)
@@ -120,8 +137,10 @@
   height: aCalc(650)
   +r($sm)
     //transform: translateY(-15px)
-    height: 176px
-    max-width: 176px
+    // height: 176px
+    // max-width: 176px
+    height: 359px
+    max-width: 359px
     width: 100%
     //object-fit: contain
     object-fit: cover
@@ -129,12 +148,18 @@
 .catalog__el.catalog__el_specialLast img
   height: aCalc(650)
   +r($sm)
-    //transform: translateY(-15px)
-    height: 176px
-    max-width: 176px
+    // height: 176px
+    // max-width: 176px
+    height: 359px
+    max-width: 359px
     width: 100%
     object-fit: cover
-    //object-fit: contain
+    //object-fit: contain catalog__link-info
+
+.catalog__el.catalog__el_specialLast 
+  .catalog__link-info
+    +r($sm)
+      max-width: max-content
 
 .catalog__link img
   pointer-events: none
@@ -166,11 +191,12 @@
 .catalog__el.catalog__el_specialFirst
   grid-column: span 2
   +r($sm)
-    min-height: 359px
+    //min-height: 359px
+    min-height: 414px
     grid-column: span 2
   .catalog__link
     +r($sm)
-      min-height: 359px !important
+      min-height: 414px !important
 .catalog__el.catalog__el_specialLast
   grid-column-start: 3
   grid-column-end: 5
