@@ -1,29 +1,31 @@
 
+
 new Swiper(".ordinary-slider", {
-  // loop: true,
   speed: 900,
   direction: 'vertical',
+  effect: "creative",
+  grabCursor: true,
+  creativeEffect: {
+    prev: {
+      shadow: true,
+          translate: [0, "-20%", -1],
+      },
+      next: {
+          translate: [0, "100%", 0],
+      },
+  },
+
+})   
+
+new Swiper(".small-slider", {
+  loop: true,
   // autoplay: {
-  //   disableOnInteraction: false,
-  //   pauseOnMouseEnter: false,
   //   delay: 2000,
   // },
-  // slidesPerGroup: 1,
-  // spaceBetween: 0,
-  // slidesPerView: 4,
-  // navigation: {
-  //   nextEl: ".slider-navigation-next",
-  //   prevEl: ".slider-navigation-prev",
-  // },
-  // breakpoints: {
-  //   320: {
-  //     slidesPerView: 2,
-  //   },
-  //   390: {
-  //     slidesPerView: 2.5,
-  //   },
-  //   640: {
-  //     slidesPerView: 4,
-  //   },
-  // },
-});
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+  speed: 900,
+  direction: 'horizontal',
+})   

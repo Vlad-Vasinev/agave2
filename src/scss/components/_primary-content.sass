@@ -82,9 +82,15 @@
   width: aCalc(25)
   height: aCalc(25)
 
+.order-primary
+  order: 1
+.order-secondary
+  order: 0
+
 //slider
 .ordinary-slider
   &__el
+    overflow: hidden
     display: grid
     justify-content: center
     align-items: center
@@ -94,6 +100,47 @@
       width: 100%
   &__el.swiper-slide
     display: flex
+    .ordinary-slider__product
+      position: relative
+      transition: .3s
+      &:hover
+        .plusHover-btn
+          svg
+            path
+              fill: #ffffff 
+        .plusHover-btn:before
+          transform: scale(1)
+        // svg
+        //   path 
+        //     fill: #ffffff
+        // button
+        //   background-color: #006837
+    .ordinary-slider__info
+      display: flex
+      justify-content: space-between
+      max-width: aCalc(331)
+      max-height: aCalc(131)
+      width: 100%
+      height: 100%
+      padding: aCalc(24)
+      background-color: #ffffff
+      border-radius: aCalc(12)
+      bottom: aCalc(122)
+      left: aCalc(90)
+      position: absolute
+      h2 
+        max-width: aCalc(212)
+        font-size: aCalc(16)
+        font-style: normal
+        font-weight: 400
+        line-height: aCalc(24)
+        span 
+          display: block
+      button
+        position: relative
+
+.ordinary-slider.swiper-container
+  overflow: hidden
 
 /////R
 .ordinary-slider
@@ -102,7 +149,6 @@
     height: 100%
     padding-top: aCalc(32)
   position: static
-  //margin-bottom: aCalc(120)
   &__el
     display: grid
     justify-content: center
@@ -119,12 +165,11 @@
         font-size: 14px
         line-height: 18px
     img
-      //border-radius: aCalc(4)
       min-height: aCalc(175)
       height: 100%
       display: block
-      width: auto
-      object-fit: contain
+      width: 100vw
+      object-fit: cover
       +r($sm)
         width: 81px
         height: 95px
@@ -262,4 +307,46 @@
   +r($sm)
     justify-content: space-between
 
-//slider
+//small-slider
+.small-slider.swiper-container
+  padding: 0
+
+.small-slider
+  .swiper-pagination
+    width: 50vw
+    height: aCalc(2)
+    position: absolute
+    top: auto
+    bottom: aCalc(80)
+    right: auto
+    left: 0
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+    background-color: #FD6
+  &__el 
+    overflow: hidden
+    // img 
+    //   height: auto
+
+// .swiper-pagination-bullet 
+//   width: 20px
+//   height: 4px
+//   border-radius: 0
+//   position: relative
+//   overflow: hidden
+// 	&::before 
+//     content: ""
+//     display: block
+//     position: absolute
+//     top: 0
+//     right: 0
+//     bottom: 0
+//     left: 0
+
+// .swiper-pagination-bullet-active 
+// 	background: rgba(#000, 0.4)
+// 	&::before 
+// 		background-color: red
+// 		animation: slide-progress 2s cubic-bezier(.3,0,.3,1) forwards
+// 		.swiper-paused & 
+// 			animation-play-state: paused
+		
