@@ -12,13 +12,21 @@ if (isMobile()) {
   document.querySelectorAll('video').forEach((el) => {
     el.removeAttribute('controls')
   })
-  
-  document.querySelector(".product__slider").classList.add("swiper");
-  document.querySelector(".product__content").classList.add("swiper-wrapper");
+  if(document.querySelector(".product__slider")) {
+    document.querySelector(".product__slider").classList.add("swiper");
+    document.querySelector(".product__content").classList.add("swiper-wrapper");
 
-  document.querySelector(".product__content").querySelectorAll('video').forEach((el) => {
-    el.removeAttribute('controls')
-  })  
+    document.querySelector(".product__content").querySelectorAll('video').forEach((el) => {
+      el.removeAttribute('controls')
+    })  
+
+  }
+  // document.querySelector(".product__slider").classList.add("swiper");
+  // document.querySelector(".product__content").classList.add("swiper-wrapper");
+
+  // document.querySelector(".product__content").querySelectorAll('video').forEach((el) => {
+  //   el.removeAttribute('controls')
+  // })  
 
   new Swiper(".product__slider", {
     slidesPerView: 1,

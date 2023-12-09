@@ -1,6 +1,6 @@
 
-
-new Swiper(".ordinary-slider", {
+console.log('768')
+const ordinarySlider = new Swiper(".ordinary-slider", {
   speed: 900,
   direction: 'vertical',
   effect: "creative",
@@ -17,15 +17,36 @@ new Swiper(".ordinary-slider", {
 
 })   
 
-new Swiper(".small-slider", {
+const smallSlider = new Swiper(".small-slider", {
   loop: true,
   // autoplay: {
   //   delay: 2000,
   // },
   pagination: {
     el: ".swiper-pagination",
-    type: "progressbar",
+    type: "bullets",
+    clickable: "true"
   },
   speed: 900,
   direction: 'horizontal',
 })   
+
+// if(isMobile()) {
+//   console.log('here is mobile')
+//   new Swiper(".small-slider", {
+//     loop: true,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       type: "bullets",
+//       clickable: "true"
+//     },
+//     speed: 900,
+//     direction: 'horizontal',
+//   }) 
+// }
+console.log('768')
+if(window.innerWidth <= 768) {
+  console.log('768')
+  ordinarySlider.destroy(true, true)
+  //smallSlider.destroy(true, true)
+}
