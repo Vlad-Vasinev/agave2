@@ -105,6 +105,13 @@
       overflow: visible
       max-width: 146px
       width: 100%
+    video
+      max-width: 50vw
+      height: auto
+      transform: scale(2)
+      +r($sm)
+        width: auto
+        height: 100vh
   &__el.swiper-slide
     display: flex
     +r($sm)
@@ -175,7 +182,7 @@
     padding-top: aCalc(32)
   position: static
   &__el:first-child
-    img
+    img, video
       height: 100vh
       // width: 100vw
       width: 100vw
@@ -409,6 +416,8 @@
     height: 100%
     +r($sm)
       max-width: 46px
+    +r($ms + 8)
+      max-width: 40px
   .swiper-pagination-bullet.swiper-pagination-bullet-active
     max-width: aCalc(360)
     width: 100%
@@ -417,4 +426,6 @@
     background-color: #006837
     +r($sm)
       max-width: 135px
+    +r($ms + 8)
+      max-width: 100px
 		

@@ -4,9 +4,15 @@
 
 .special__title
   margin-bottom: aCalc(30)
+  +r($sm)
+    margin-bottom: 16px
 
 .special__list
   display: flex
+  +r($sm)
+    margin-bottom: 80px
+    max-width: 100%
+    overflow: scroll
   
 .special__item
   padding-top: aCalc(40)
@@ -16,9 +22,20 @@
   box-sizing: border-box
   background-color: #F9F9F9
   z-index: 1
+  +r($sm)
+    max-width: 228px
+    min-height: 291px
+    flex-shrink: 0
+    overflow: hidden
+  .special__link 
+    +r($sm)
+      padding: 10px
+      height: 100%
 
 .special__link-title
   margin-bottom: aCalc(10)
+  +r($sm)
+    margin-bottom: 6px
 
 .special__link-info
   padding: 0 aCalc(20) aCalc(20) aCalc(20)
@@ -30,12 +47,22 @@
   max-width: aCalc(333)
   width: 100%
   max-height: aCalc(333)
+  +r($sm)
+    max-width: 100%
+    max-height: 100%
 
 .special__link-img img
   object-fit: cover
   width: 100%
+  +r($sm)
+    height: 220px
+    width: 220px
+    //width: 100%
+    object-fit: cover
 
 .special__item + .special__item
   margin-left: aCalc(24)
+  +r($sm)
+    margin-left: 7px
 
         

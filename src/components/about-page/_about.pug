@@ -5,7 +5,11 @@ section
     .ordinary-slider.swiper-container
           .ordinary-slider__content.swiper-wrapper
             .ordinary-slider__el.swiper-slide 
-              img(src="img/main-slider-1.jpg", alt="")
+              <video class="video__el" autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/main-slider-1.jpg">
+                <source src="img/video/NewYork.mp4" type="video/mp4">
+                <source src="img/video/NewYork.webm" type="video/webm">
+              </video>
+              //-img(src="img/main-slider-1.jpg", alt="")
               //- .slider__el-name Свадебные
             - var slide = 0
             while slide < 7
@@ -142,6 +146,10 @@ section
                             </svg>
                         img(src="img/main-slider-3.jpg", alt="")
                   <div class="swiper-pagination"></div>
+                //- <video class="video__el" autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/main-slider-1.jpg">
+                //-   <source src="img/video/NewYork.mp4" type="video/mp4">
+                //-   <source src="img/video/NewYork.webm" type="video/webm">
+                //- </video>
                 img.order-primary(src="img/main-slider-2.jpg", alt="")
               - slide++ 
 //- section.sliders
