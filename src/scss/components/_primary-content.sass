@@ -95,6 +95,50 @@
   &__content.swiper-wrapper
     +r($sm)
       display: block
+  &__el:first-child
+    // +r($sm)
+    //   background-color: #DFD7CC !important
+    //   height: 100vh
+  .ordinary-slider__el.ordinary-slider__first 
+    display: flex
+    flex-direction: column
+    +r($sm)
+      justify-content: flex-start
+    .ordinary-slider__logo
+      margin-top: aCalc(41)
+      +r($sm)
+        margin-top: 22px
+    .ordinary-slider__decorate
+      margin-top: aCalc(30)
+      display: flex
+      justify-content: center
+      max-width: aCalc(64)
+      width: 100%
+      +r($sm)
+        margin-top: 30px
+        max-width: 64px
+      .ordinary-slider__dot
+        width: aCalc(4)
+        height: aCalc(4)
+        background-color: #006837
+        border-radius: 50%
+        +r($sm)
+          width: 4px
+          height: 4px
+      .ordinary-slider__dot + .ordinary-slider__dot 
+        margin-left: aCalc(16)
+        +r($sm)
+          margin-left: 16px
+    .ordinary-slider__text
+      margin-top: aCalc(30)
+      font-size: 24px
+      line-height: 34px
+      +r($sm)
+        margin-top: 30px
+    +r($sm)
+      text-align: center
+      background-color: #DFD7CC !important
+      height: 100vh
   &__el
     overflow: hidden
     display: grid
@@ -108,7 +152,7 @@
     video
       max-width: 50vw
       height: auto
-      transform: scale(2)
+      //transform: scale(2)
       +r($sm)
         transform: none
         width: auto
@@ -127,6 +171,9 @@
               fill: #ffffff 
         .plusHover-btn:before
           transform: scale(1)
+      +r($sm)
+        max-width: 343px
+        margin: 0 auto
     .ordinary-slider__info
       display: flex
       justify-content: space-between
@@ -142,6 +189,7 @@
       position: absolute
       z-index: 200
       +r($sm)
+        left: 10px
         max-width: 204px
         max-height: 71px
         border-radius: 8px
@@ -183,18 +231,77 @@
     padding-top: aCalc(32)
   position: static
   &__el:first-child
+    background-color: #DFD7CC
+    +r($sm)
+      background-color: transparent
     img, video
       height: 100vh
       // width: 100vw
       width: 100vw
-      object-fit: cover
+      object-fit: contain 
       +r($sm)
         height: 375px
         max-width: 100vw
   &__el 
+    clip-path: url(../../img/logo2-cliped.svg)
     .video__el.video__el-main 
+      transform:  none
+      max-width: aCalc(681)
+      // max-width: aCalc(512)
+      max-height: aCalc(466)
+      margin-top: aCalc(188)
+      mask-image: url('../../img/logo2-cliped.svg') center
+      mask-size: 75%  
+      -webkit-mask: url(../../img/logo2-cliped.svg) center
+      -webkit-mask-size: 75%
+      mask-repeat: no-repeat
+      -webkit-mask-repeat: no-repeat
+      //clip-path: url(../../img/logo2-cliped.svg)
       +r($sm)
-        height: 100vh
+        // object-fit: cover
+        // transform: none
+        // height: 100vh
+        object-fit: contain
+        -webkit-transform: none
+        -ms-transform: none
+        transform: none
+        height: auto
+        margin: 0 auto
+        max-width: 370px
+        max-height: 253px
+        margin-top: 188px
+        // clip-path: polygon(0% 0%, 100% 0.16%, 100% 100%, 0% 100%)   
+        // background-image: url('../../img/logo2-cliped.svg')
+    .video-wrapper
+      position: relative
+      transform: scaleY(2)
+      +r($sm)
+        transform: none
+      .video__el-name
+        text-align: center
+        font-size: aCalc(16)
+        padding: aCalc(0) aCalc(16)
+        position: absolute
+        z-index: 200
+        left: aCalc(80)
+        top: aCalc(80)
+        color: #ffffff
+        font-style: normal
+        font-weight: 400
+        line-height: aCalc(24)
+        max-width: aCalc(233)
+        width: 100%
+        max-height: aCalc(24)
+        border-radius: aCalc(12)
+        background-color: rgba(255, 255, 255, 0.15)
+        backdrop-filter: blur(7.5px)
+    .video__el.video__el-secondary 
+      position: relative
+      //transform: scaleY(2)
+      +r($sm)
+        height: 375px
+        transform: scaleY(1.6)
+        max-width: 100vw
   &__el
     display: grid
     justify-content: center
@@ -254,7 +361,7 @@
     width: aCalc(6)
     height: aCalc(6)
     background-color: #000000
-    opacity: 0.5
+    opacity: 1
     +r($sm)
       width: 6px
       height: 6px
@@ -361,6 +468,7 @@
   padding: 0
   +r($sm)
     position: relative
+    z-index: 200
     overflow: hidden
     max-width: 100%
     transform: translateY(-98px)
@@ -419,13 +527,18 @@
     background-color: #AFA9BA
     min-height: aCalc(2)
     height: 100%
+    border-radius: aCalc(8)
+    opacity: 0.5
     +r($sm)
+      min-height: 2px
       max-width: 46px
+      border-radius: 8
     +r($ms + 8)
       max-width: 40px
   .swiper-pagination-bullet.swiper-pagination-bullet-active
     max-width: aCalc(360)
     width: 100%
+    opacity: 1
     min-height: aCalc(2)
     height: 100%
     background-color: #006837
