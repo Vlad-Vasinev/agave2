@@ -96,7 +96,11 @@
   &__content.swiper-wrapper
     +r($sm)
       display: block
-  &__el:first-child
+  &__el
+    .small-slider.swiper-container
+        +r($sm)
+          max-width: 100%
+          width: 100%
     // +r($sm)
     //   background-color: #DFD7CC !important
     //   height: 100vh
@@ -300,6 +304,13 @@
         border-radius: aCalc(12)
         background-color: rgba(255, 255, 255, 0.15)
         backdrop-filter: blur(7.5px)
+        +r($sm)
+          max-width: 155px
+          padding: 6px
+          font-size: 11px
+          max-height: 27px
+          line-height: 15px
+          border-radius: 8px
     .video__el.video__el-secondary 
       position: relative
       //transform: scaleY(2)
