@@ -26,9 +26,9 @@ const ordinarySlider = new Swiper(".ordinary-slider", {
 
 const smallSlider = new Swiper(".small-slider", {
   loop: true,
-  // autoplay: {
-  //   delay: 2000,
-  // },
+  autoplay: {
+    delay: 2000,
+  },
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
@@ -40,5 +40,20 @@ const smallSlider = new Swiper(".small-slider", {
 
 if(window.innerWidth <= 768) {
   ordinarySlider.destroy(true, true)
-  //smallSlider.destroy(true, true)
+  document.querySelector('.special-wrapper').classList.add('swiper-container')
+  document.querySelector('.special__list').classList.add('swiper-wrapper')
+  document.querySelector('.special__list').querySelectorAll('.special__item').forEach((el) => {
+    el.classList.add('swiper-slide')
+  })
+  const specialSlider = new Swiper(".special-wrapper", {
+    loop: true,
+    speed: 900,
+    autoplay: {
+      delay: 2000,
+    },
+    slidesPerGroup: 1,
+    slidesPerView: 2,
+    direction: 'horizontal',
+  })  
+
 }
