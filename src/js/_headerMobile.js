@@ -13,10 +13,12 @@ document.querySelectorAll('.mobile-email.header-mobile__email').forEach((el) => 
     if(!el.getAttribute('clicked')) {
       el.setAttribute('clicked', "clicked")
       mobileMenu.classList.add("mobile-menu_active");
+      headerInner.classList.add('header-mobile_active')
       document.querySelector('.mobile-email').innerHTML = '<button class="mobile-menu__button close-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.63599 18.364L18.3639 5.63603M5.63599 5.63604L18.3639 18.364" stroke="black" stroke-width="1.5" stroke-linecap="round"/></svg></button>'
       disableScroll();
     }
     else {
+      headerInner.classList.remove('header-mobile_active')
       el.removeAttribute('clicked')
       mobileMenu.classList.remove("mobile-menu_active");
       enableScroll();
@@ -33,7 +35,7 @@ if(isMobile()) {
   let headerMobile = document.querySelector('.header-mobile');
   const observer = new IntersectionObserver(
     ([e]) => {
-      headerInner.classList.toggle("header-mobile_active", e.isIntersecting < 1)
+      //headerInner.classList.toggle("header-mobile_active", e.isIntersecting < 1)
     },
     {
       root: null,
