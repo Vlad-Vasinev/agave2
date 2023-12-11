@@ -61,8 +61,8 @@ window.enableScroll = enableScroll
 
 
 // Подключение свайпера
-import Swiper, { Navigation, Pagination, Autoplay, Zoom, Keyboard, Thumbs} from 'swiper';
-Swiper.use([Navigation, Pagination, Autoplay, Zoom, Keyboard, Thumbs]);
+import Swiper, { Navigation, Pagination, Autoplay, Zoom, Keyboard, Thumbs, Mousewheel} from 'swiper';
+Swiper.use([Navigation, Pagination, Autoplay, Zoom, Keyboard, Thumbs, Mousewheel]);
 window.Swiper = Swiper
 
 // import './functions/zoomove';

@@ -1,10 +1,17 @@
 
-console.log('768')
+
 const ordinarySlider = new Swiper(".ordinary-slider", {
   speed: 900,
   direction: 'vertical',
   effect: "creative",
-  grabCursor: true,
+  //grabCursor: true,
+  mousewheel: {
+    enabled: true,
+    sensitivity: 4,
+  },
+  followFinger: true,
+  freeMode: true,
+  simulateTouch:	false,
   creativeEffect: {
     prev: {
       shadow: true,
@@ -15,7 +22,7 @@ const ordinarySlider = new Swiper(".ordinary-slider", {
       },
   },
 
-})   
+})  
 
 const smallSlider = new Swiper(".small-slider", {
   loop: true,
@@ -31,22 +38,7 @@ const smallSlider = new Swiper(".small-slider", {
   direction: 'horizontal',
 })   
 
-// if(isMobile()) {
-//   console.log('here is mobile')
-//   new Swiper(".small-slider", {
-//     loop: true,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       type: "bullets",
-//       clickable: "true"
-//     },
-//     speed: 900,
-//     direction: 'horizontal',
-//   }) 
-// }
-console.log('768')
 if(window.innerWidth <= 768) {
-  console.log('768')
   ordinarySlider.destroy(true, true)
   //smallSlider.destroy(true, true)
 }
