@@ -8,7 +8,11 @@ const ordinarySlider = new Swiper(".ordinary-slider", {
   mousewheel: {
     enabled: true,
     sensitivity: 4,
+    releaseOnEdges: true,
   },
+  // touchReleaseOnEdges: true,
+  // toEdge: true,
+  // edgeSwipeThreshold: 100,
   followFinger: true,
   freeMode: true,
   simulateTouch:	false,
@@ -23,6 +27,12 @@ const ordinarySlider = new Swiper(".ordinary-slider", {
   },
 
 })  
+
+// ordinarySlider.on('toEdge', (e) => {
+//   console.log('last slide')
+//   e.params.touchReleaseOnEdges = "true"
+//   e.params.mousewheel = "{enabled: false}"
+// })
 
 const smallSlider = new Swiper(".small-slider", {
   loop: true,
