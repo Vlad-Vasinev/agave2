@@ -48,9 +48,9 @@ if(window.innerWidth <= 768) {
   const specialSlider = new Swiper(".special-wrapper", {
     loop: true,
     speed: 900,
-    autoplay: {
-      delay: 2000,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    // },
     slidesPerGroup: 1,
     slidesPerView: 2,
     direction: 'horizontal',
