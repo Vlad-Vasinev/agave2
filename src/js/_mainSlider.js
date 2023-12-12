@@ -10,9 +10,6 @@ const ordinarySlider = new Swiper(".ordinary-slider", {
     sensitivity: 4,
     releaseOnEdges: true,
   },
-  // touchReleaseOnEdges: true,
-  // toEdge: true,
-  // edgeSwipeThreshold: 100,
   followFinger: true,
   freeMode: true,
   simulateTouch:	false,
@@ -27,12 +24,6 @@ const ordinarySlider = new Swiper(".ordinary-slider", {
   },
 
 })  
-
-// ordinarySlider.on('toEdge', (e) => {
-//   console.log('last slide')
-//   e.params.touchReleaseOnEdges = "true"
-//   e.params.mousewheel = "{enabled: false}"
-// })
 
 const smallSlider = new Swiper(".small-slider", {
   loop: true,
@@ -58,12 +49,30 @@ if(window.innerWidth <= 768) {
   const specialSlider = new Swiper(".special-wrapper", {
     loop: true,
     speed: 900,
-    // autoplay: {
-    //   delay: 2000,
-    // },
+    autoplay: {
+      delay: 2000,
+    },
     slidesPerGroup: 1,
     slidesPerView: 2,
     direction: 'horizontal',
   })  
 
+}
+
+if(window.innerWidth >= 768) {
+  document.querySelectorAll('.video-wrapper').forEach((el) => {
+  if(el.querySelector('video')) {
+    console.log('this is video')
+    el.style.transform = "scaleY(2)"
+    el.querySelectorAll(".video__el-name").forEach((item) => {
+      item.style.transform = "scaleY(0.7)"
+    })
+  }
+  else if (el.document.querySelector('img')) {
+    console.log('this is image')
+    el.querySelectorAll(".video__el-name").forEach((item) => {
+      item.style.transform = "scaleY(1)"
+    })
+  }
+})
 }
