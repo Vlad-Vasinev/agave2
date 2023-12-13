@@ -27,9 +27,13 @@ const ordinarySlider = new Swiper(".ordinary-slider", {
 
 const smallSlider = new Swiper(".small-slider", {
   loop: true,
-  autoplay: {
-    delay: 2000,
-  },
+  // autoplay: {
+  //   delay: 2000,
+  // },
+  //createElements: true,
+  // renderBullet: function (index, className) {
+  //   return '<span class="' + className + '">' + (index + 1) + '</span>';
+  // },
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
@@ -49,9 +53,9 @@ if(window.innerWidth <= 768) {
   const specialSlider = new Swiper(".special-wrapper", {
     loop: true,
     speed: 900,
-    autoplay: {
-      delay: 2000,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    // },
     slidesPerGroup: 1,
     slidesPerView: 2,
     direction: 'horizontal',
@@ -66,20 +70,20 @@ if(window.innerWidth >= 768) {
     el.style.transform = "scaleY(2)"
     el.querySelectorAll(".video__el-name").forEach((item) => {
       item.style.transform = "scaleY(0.5)"
-      //item.style.top = "calc(80px)"
+      //item.style.top = "calc(20px)"
     })
   }
-  else if (el.document.querySelector('img')) {
+  else  {
     console.log('this is image')
     el.querySelectorAll(".video__el-name").forEach((item) => {
       item.style.transform = "scaleY(1)"
     })
   }
 })
-}
 
-// if(window.innerWidth <= 768) {
-//   document.querySelectorAll('.video-wrapper').forEach((el) => {
-//     el.querySelector('img').classList.maxWidth = "100vw important"
-//   })
-// }
+document.querySelectorAll('.ordinary-slider__el.ordinary-slider__right').forEach((el) => {
+  console.log(el)
+  el.querySelector('.swiper-pagination').classList.add('ordinary-slider__right_active')
+})
+
+}

@@ -28,6 +28,13 @@
   background-color: #006837
   transform: scale(0)
 
+.special__item 
+  border-radius: aCalc(12)
+
+.special__item.swiper-slide 
+  +r($sm)
+    border-radius: 12px
+
 .content__info:hover
   .plus-btn
     svg
@@ -510,6 +517,16 @@
     // transform: translateY(-98px)
     //transform: none
     height: 413px  
+  // .swiper-pagination
+  //   width: auto
+  //   height: auto
+  //   left: 0
+  //   right: 0
+  //   margin: 0 auto
+  //   transform: translateY(50%)
+  //   bottom: aCalc(-41)
+  //   +r($sm)
+  //     bottom: -37px
 
 
 .small-slider
@@ -553,6 +570,7 @@
     +r($sm)
       overflow: visible
   &__el
+    position: relative
     img 
       max-width: 50vw
       +r($sm)
@@ -585,3 +603,6 @@
     +r($ms + 8)
       max-width: 100px
 		
+.ordinary-slider__right_active
+  right: 0 !important
+  left: auto !important
