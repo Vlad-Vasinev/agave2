@@ -49,9 +49,9 @@ if(window.innerWidth <= 768) {
   const specialSlider = new Swiper(".special-wrapper", {
     loop: true,
     speed: 900,
-    // autoplay: {
-    //   delay: 2000,
-    // },
+    autoplay: {
+      delay: 2000,
+    },
     slidesPerGroup: 1,
     slidesPerView: 2,
     direction: 'horizontal',
@@ -65,7 +65,8 @@ if(window.innerWidth >= 768) {
     console.log('this is video')
     el.style.transform = "scaleY(2)"
     el.querySelectorAll(".video__el-name").forEach((item) => {
-      item.style.transform = "scaleY(0.7)"
+      item.style.transform = "scaleY(0.5)"
+      //item.style.top = "calc(80px)"
     })
   }
   else if (el.document.querySelector('img')) {
