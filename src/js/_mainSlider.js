@@ -27,9 +27,9 @@ const ordinarySlider = new Swiper(".ordinary-slider", {
 
 const smallSlider = new Swiper(".small-slider", {
   loop: true,
-  // autoplay: {
-  //   delay: 2000,
-  // },
+  autoplay: {
+    delay: 2000,
+  },
   //createElements: true,
   // renderBullet: function (index, className) {
   //   return '<span class="' + className + '">' + (index + 1) + '</span>';
