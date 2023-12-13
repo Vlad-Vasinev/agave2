@@ -1,9 +1,17 @@
 
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
+  document.querySelector('.choosers .choosers__el.choosers__el-one button').classList.add('choosers__el-one_active')
+  document.querySelector('.choosers .choosers__el.choosers__el-one button').querySelector('span').classList.add('choosers__el_show')
+  document.querySelector('.choosers .choosers__el.choosers__el-two button').classList.add('choosers__el-two_active')
+})
+
 let selectedTd
 let selectedTd_1
 let selectedTd_2
 
 function highlight(node) {
+  document.querySelector('.choosers .choosers__el.choosers__el-two button').classList.remove('choosers__el-two_active')
   if (selectedTd) {
     selectedTd.classList.remove('choosers__el-two_active');
   }
@@ -12,6 +20,8 @@ function highlight(node) {
 }
 
 function highlightSecond(node_1, node_2) {
+  document.querySelector('.choosers .choosers__el.choosers__el-one button').classList.remove('choosers__el-one_active')
+  document.querySelector('.choosers .choosers__el.choosers__el-one button').querySelector('span').classList.remove('choosers__el_show')
   if (selectedTd_1, selectedTd_1) {
     selectedTd_1.classList.remove('choosers__el-one_active')
     selectedTd_2.classList.remove('choosers__el_show')
