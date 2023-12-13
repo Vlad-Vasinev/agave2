@@ -27,9 +27,9 @@ const ordinarySlider = new Swiper(".ordinary-slider", {
 
 const smallSlider = new Swiper(".small-slider", {
   loop: true,
-  autoplay: {
-    delay: 2000,
-  },
+  // autoplay: {
+  //   delay: 2000,
+  // },
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
@@ -49,9 +49,9 @@ if(window.innerWidth <= 768) {
   const specialSlider = new Swiper(".special-wrapper", {
     loop: true,
     speed: 900,
-    autoplay: {
-      delay: 2000,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    // },
     slidesPerGroup: 1,
     slidesPerView: 2,
     direction: 'horizontal',
