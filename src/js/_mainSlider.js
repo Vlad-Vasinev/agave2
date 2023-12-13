@@ -27,9 +27,9 @@ const ordinarySlider = new Swiper(".ordinary-slider", {
 
 const smallSlider = new Swiper(".small-slider", {
   loop: true,
-  // autoplay: {
-  //   delay: 2000,
-  // },
+  autoplay: {
+    delay: 2000,
+  },
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
@@ -76,3 +76,9 @@ if(window.innerWidth >= 768) {
   }
 })
 }
+
+// if(window.innerWidth <= 768) {
+//   document.querySelectorAll('.video-wrapper').forEach((el) => {
+//     el.querySelector('img').classList.maxWidth = "100vw important"
+//   })
+// }

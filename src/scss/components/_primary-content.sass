@@ -161,6 +161,8 @@
       max-width: 50vw
       height: auto
       //transform: scale(2)
+      +r($lg + 2)
+        transform: scaleY(1.5)
       +r($sm)
         transform: none
         width: auto
@@ -337,13 +339,21 @@
         font-size: 14px
         line-height: 18px
     img
+      // height: 100vh
+      // max-width: 100vw 50vw
       height: 100vh
-      display: block
       max-width: 100vw
+      display: block
       object-fit: cover
+      +r($uhd + 2)
+        max-width: 50vw
+        height: auto
       +r($lg + 2)
+        height: 100vh
         width: 50vw
       +r($sm)
+        //max-width: 100vw !important
+        max-width: 100vw
         width: 100vw
         height: 375px
     +r($sm)
