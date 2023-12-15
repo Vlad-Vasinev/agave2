@@ -52,8 +52,8 @@ if(window.innerWidth <= 768) {
     // autoplay: {
     //   delay: 2000,
     // },
-    slidesPerGroup: 1,
-    slidesPerView: 1,
+    //slidesPerGroup: 1,
+    slidesPerView: "auto",
     direction: 'horizontal',
   })  
 

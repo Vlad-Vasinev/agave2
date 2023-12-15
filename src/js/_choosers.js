@@ -34,14 +34,14 @@ function highlightSecond(node_1, node_2) {
 document.querySelectorAll('.choosers .choosers__el.choosers__el-two button').forEach((el) => {
   
   el.addEventListener('click', (e) => {
-    highlightSecond(document.querySelectorAll('.choosers .choosers__el.choosers__el-one button')[el.getAttribute("data-id")], document.querySelectorAll('.choosers .choosers__el.choosers__el-one button')[el.getAttribute("data-id")].querySelector('span'))
+    //highlightSecond(document.querySelectorAll('.choosers .choosers__el.choosers__el-one button')[el.getAttribute("data-id")], document.querySelectorAll('.choosers .choosers__el.choosers__el-one button')[el.getAttribute("data-id")].querySelector('span'))
     highlight(el)
   })
 })
 
 document.querySelectorAll('.choosers .choosers__el.choosers__el-one button').forEach((el) => {
   el.addEventListener('click', (e) => {
-    highlight(document.querySelectorAll('.choosers .choosers__el.choosers__el-two button')[el.getAttribute("data-id")])
+    //highlight(document.querySelectorAll('.choosers .choosers__el.choosers__el-two button')[el.getAttribute("data-id")])
     highlightSecond(el, el.querySelector('span'))
   })
 })
