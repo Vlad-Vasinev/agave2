@@ -30,10 +30,6 @@ const smallSlider = new Swiper(".small-slider", {
   autoplay: {
     delay: 2000,
   },
-  //createElements: true,
-  // renderBullet: function (index, className) {
-  //   return '<span class="' + className + '">' + (index + 1) + '</span>';
-  // },
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",

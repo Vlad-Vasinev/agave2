@@ -35,7 +35,7 @@ if(isMobile()) {
   let headerMobile = document.querySelector('.header-mobile');
   const observer = new IntersectionObserver(
     ([e]) => {
-      //headerInner.classList.toggle("header-mobile_active", e.isIntersecting < 1)
+      headerInner.classList.toggle("header-mobile_active", e.isIntersecting < 1)
     },
     {
       root: null,
