@@ -87,22 +87,24 @@ section.product
           .choosers__el.choosers__el-one
             .choosers__el-title Цвет:
             .choosers__el-items 
-              button(style="background-color: #EEEFF1") 
+              button(style="background-color: #EEEFF1" data-id='0') 
                 span 
-              button(style="background-color: #F9E3CC")
+              button(style="background-color: #F9E3CC" data-id="1")
                 span
-              button(style="background-color: #373738") 
+              button(style="background-color: #373738" data-id="2") 
                 span
-              button(style="background-color: #6B557E") 
+              button(style="background-color: #6B557E" data-id="3") 
+                span
+              button(style="background-color: #2B447E" data-id="4") 
                 span
           .choosers__el.choosers__el-two
             .choosers__el-title объем, мл:
             .choosers__el-items 
-              button 100
-              button 150
-              button 300
-              button 600
-              button 650
+              button(data-id="0") 100
+              button(data-id="1") 150
+              button(data-id="2") 300
+              button(data-id="3") 600
+              button(data-id="4") 650
         .product__price-block
           a.product__price-numb
             |7 500 &#8381;

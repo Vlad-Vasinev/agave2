@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 let selectedTd
 let selectedTd_1
 let selectedTd_2
-
 function highlight(node) {
   document.querySelector('.choosers .choosers__el.choosers__el-two button').classList.remove('choosers__el-two_active')
   if (selectedTd) {
@@ -18,7 +17,6 @@ function highlight(node) {
   selectedTd = node;
   selectedTd.classList.add('choosers__el-two_active');
 }
-
 function highlightSecond(node_1, node_2) {
   document.querySelector('.choosers .choosers__el.choosers__el-one button').classList.remove('choosers__el-one_active')
   document.querySelector('.choosers .choosers__el.choosers__el-one button').querySelector('span').classList.remove('choosers__el_show')
@@ -36,13 +34,14 @@ function highlightSecond(node_1, node_2) {
 document.querySelectorAll('.choosers .choosers__el.choosers__el-two button').forEach((el) => {
   
   el.addEventListener('click', (e) => {
-    console.log(e.target)
+    highlightSecond(document.querySelectorAll('.choosers .choosers__el.choosers__el-one button')[el.getAttribute("data-id")], document.querySelectorAll('.choosers .choosers__el.choosers__el-one button')[el.getAttribute("data-id")].querySelector('span'))
     highlight(el)
   })
 })
 
 document.querySelectorAll('.choosers .choosers__el.choosers__el-one button').forEach((el) => {
   el.addEventListener('click', (e) => {
+    highlight(document.querySelectorAll('.choosers .choosers__el.choosers__el-two button')[el.getAttribute("data-id")])
     highlightSecond(el, el.querySelector('span'))
   })
 })

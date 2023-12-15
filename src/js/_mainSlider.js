@@ -47,13 +47,13 @@ if(window.innerWidth <= 768) {
     el.classList.add('swiper-slide')
   })
   const specialSlider = new Swiper(".special-wrapper", {
-    loop: true,
+    //loop: true,
     speed: 900,
     // autoplay: {
     //   delay: 2000,
     // },
     slidesPerGroup: 1,
-    slidesPerView: 2,
+    slidesPerView: 1,
     direction: 'horizontal',
   })  
 
