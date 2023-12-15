@@ -82,8 +82,9 @@
 .catalog__el.catalog__el_ordinary .catalog__link
   display: grid
   justify-content: center
-  align-content: baseline
-  // align-content: center
+  align-content: center
+  +r($sm)
+    align-content: baseline
 
 .catalog__el, .catalog__link
   display: block
