@@ -62,15 +62,15 @@ if(window.innerWidth >= 768) {
   if(el.querySelector('video')) {
     console.log('this is video')
     el.style.transform = "scaleY(2)"
-    el.querySelectorAll(".video__el-name").forEach((item) => {
-      item.style.transform = "scaleY(0.5)"
-    })
+    el.querySelector(".video__el-name").style.transform = "scaleY(0.5)"
+      //item.style.transform = "scaleY(0.5)"
+    //})
   }
   else  {
     console.log('this is image')
-    el.querySelectorAll(".video__el-name").forEach((item) => {
-      item.style.transform = "scaleY(1)"
-    })
+    el.querySelector(".video__el-name").style.transform = "scaleY(1)"
+      //item.style.transform = "scaleY(1)"
+    //})
   }
 })
 
