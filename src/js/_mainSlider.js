@@ -57,22 +57,19 @@ if(window.innerWidth <= 768) {
 
 }
 
-if(window.innerWidth >= 768) {
-  document.querySelectorAll('.video-wrapper').forEach((el) => {
-  if(el.querySelector('video')) {
-    console.log('this is video')
-    el.style.transform = "scaleY(2)"
-    el.querySelector(".video__el-name").style.transform = "scaleY(0.5)"
-      //item.style.transform = "scaleY(0.5)"
-    //})
-  }
-  else  {
-    console.log('this is image')
-    el.querySelector(".video__el-name").style.transform = "scaleY(1)"
-      //item.style.transform = "scaleY(1)"
-    //})
-  }
-})
+// if(window.innerWidth >= 768) {
+//   document.querySelectorAll('.video-wrapper').forEach((el) => {
+//     if(el.querySelector('video')) {
+//       console.log('this is video')
+//       el.style.transform = "scaleY(2)"
+//       el.querySelector(".video__el-name").style.transform = "scaleY(0.5)"
+//     }
+//     else  {
+//       console.log('this is image')
+//       el.querySelector(".video__el-name").style.transform = "scaleY(1)"
+//     }
+//   })
+// }
 
 // if(window.innerWidth <= 768) {
 //   document.querySelectorAll('.video-wrapper').forEach((el) => {
@@ -91,5 +88,3 @@ document.querySelectorAll('.ordinary-slider__el.ordinary-slider__right').forEach
   console.log(el)
   el.querySelector('.swiper-pagination').classList.add('ordinary-slider__right_active')
 })
-
-}
