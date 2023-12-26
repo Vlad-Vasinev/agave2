@@ -1,9 +1,11 @@
 
 document.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
-  document.querySelector('.choosers .choosers__el.choosers__el-one button').classList.add('choosers__el-one_active')
-  document.querySelector('.choosers .choosers__el.choosers__el-one button').querySelector('span').classList.add('choosers__el_show')
-  document.querySelector('.choosers .choosers__el.choosers__el-two button').classList.add('choosers__el-two_active')
+  if(document.querySelector('.choosers')) {
+    document.querySelector('.choosers .choosers__el.choosers__el-one button').classList.add('choosers__el-one_active')
+    document.querySelector('.choosers .choosers__el.choosers__el-one button').querySelector('span').classList.add('choosers__el_show')
+    document.querySelector('.choosers .choosers__el.choosers__el-two button').classList.add('choosers__el-two_active')
+  }
 })
 
 let selectedTd
