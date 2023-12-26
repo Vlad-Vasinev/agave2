@@ -4,7 +4,6 @@ const ordinarySlider = new Swiper(".ordinary-slider", {
   speed: 900,
   direction: 'vertical',
   effect: "creative",
-  //grabCursor: true,
   mousewheel: {
     enabled: true,
     sensitivity: 4,
@@ -40,6 +39,7 @@ const smallSlider = new Swiper(".small-slider", {
 })   
 
 if(window.innerWidth <= 768) {
+
   ordinarySlider.destroy(true, true)
   document.querySelector('.special-wrapper').classList.add('swiper-container')
   document.querySelector('.special__list').classList.add('swiper-wrapper')
@@ -47,12 +47,10 @@ if(window.innerWidth <= 768) {
     el.classList.add('swiper-slide')
   })
   const specialSlider = new Swiper(".special-wrapper", {
-    //loop: true,
     speed: 900,
     // autoplay: {
     //   delay: 2000,
     // },
-    //slidesPerGroup: 1,
     slidesPerView: "auto",
     direction: 'horizontal',
   })  
@@ -66,7 +64,6 @@ if(window.innerWidth >= 768) {
     el.style.transform = "scaleY(2)"
     el.querySelectorAll(".video__el-name").forEach((item) => {
       item.style.transform = "scaleY(0.5)"
-      //item.style.top = "calc(20px)"
     })
   }
   else  {
@@ -76,6 +73,19 @@ if(window.innerWidth >= 768) {
     })
   }
 })
+
+// if(window.innerWidth <= 768) {
+//   document.querySelectorAll('.video-wrapper').forEach((el) => {
+//     if(el.querySelector('video')) {
+//       el.querySelector(".video__el-name").style.top = "20px"
+//         //item.style.top = "20px"
+//       console.log(item)
+//     }
+//     else  {
+//       el.querySelector(".video__el-name").style.top = "136px"
+//     }
+//   })
+// }
 
 document.querySelectorAll('.ordinary-slider__el.ordinary-slider__right').forEach((el) => {
   console.log(el)
