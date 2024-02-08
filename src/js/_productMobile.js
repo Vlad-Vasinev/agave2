@@ -205,3 +205,6 @@ document.querySelectorAll('.product__description-close').forEach((el, index) => 
   })
 })
 
+
+
+console.log('products')
