@@ -23,9 +23,14 @@
                 </clipPath>
                 </defs>                          
               </svg>
-            .blured-container(js-lazy)
-              img#1.catalog-img-primary(data-src="/img/catalog-bg.png" alt="")
-            img.lazy.catalog-img-secondary(alt="", data-src="/img/catalog-frame-1.png", loading="lazy")
+            .blured-container()
+              //-img#1.catalog-img-primary(data-src="/img/catalog-bg.png" alt="")
+              <picture (js-lazy)>
+                <source media="(min-width:768px)" srcset="/img/catalog-bg.png">
+                <source media="(max-width:768px)" srcset="/img/catalog-frame-1.png">
+                <img id="1" class="catalog-img-primary" data-src="/img/catalog-bg.png" alt="Agave image 1">
+              </picture>
+            img.lazy.catalog-img-secondary(alt="", data-src="/img/catalog-frame-4.png", loading="lazy")
             .catalog__link-info 
               h2.catalog__link-title.secondary-title-h3 Умный чайник-светильник REDMOND SkyKettle G203S
               .catalog__link-price.secondary-title-h3 7 500 ₽
@@ -49,8 +54,13 @@
                 </clipPath>
                 </defs>                          
               </svg>
-            .blured-container(js-lazy)
-              img#2.catalog-img-primary(data-src="/img/catalog-bg.png" alt="")
+            .blured-container()
+              <picture (js-lazy)>
+                <source media="(min-width:768px)" srcset="/img/catalog-bg.png">
+                <source media="(max-width:768px)" srcset="/img/catalog-frame-1.png">
+                <img id="2" class="catalog-img-primary" data-src="/img/catalog-bg.png" alt="Agave image 1">
+              </picture>
+              //-img#2.catalog-img-primary(data-src="/img/catalog-bg.png" alt="")
             img.lazy.catalog-img-secondary( alt="", data-src="/img/catalog-frame-4.png")
             .catalog__link-info 
               h2.catalog__link-title.secondary-title-h3 Умный чайник-светильник REDMOND SkyKettle G203S
@@ -76,8 +86,13 @@
                 </defs>                          
               </svg>
               //- +svg('black-plus')
-            .blured-container(js-lazy)
-              img#3.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
+            .blured-container()
+              <picture (js-lazy)>
+                <source media="(min-width:768px)" srcset="/img/catalog-bg.png">
+                <source media="(max-width:768px)" srcset="/img/catalog-frame-1.png">
+                <img id="3" class="catalog-img-primary" data-src="/img/catalog-bg.png" alt="Agave image 1">
+              </picture>
+              //-img#3.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
             img.lazy.catalog-img-secondary( alt="", data-src="/img/catalog-frame-4.png")
             .catalog__link-info 
               h2.catalog__link-title.secondary-title-h3 Умный чайник-светильник REDMOND SkyKettle G203S
@@ -102,8 +117,13 @@
                 </clipPath>
                 </defs>                          
               </svg>
-            .blured-container(js-lazy)
-              img#4.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
+            .blured-container()
+              <picture (js-lazy)>
+                <source media="(min-width:768px)" srcset="/img/catalog-bg.png">
+                <source media="(max-width:768px)" srcset="/img/catalog-frame-1.png">
+                <img id="4" class="catalog-img-primary" data-src="/img/catalog-bg.png" alt="Agave image 1">
+              </picture>
+              //-img#4.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
             img.lazy.catalog-img-secondary( alt="", data-src="/img/catalog-frame-4.png")
             .catalog__link-info 
               h2.catalog__link-title.secondary-title-h3 Умный чайник-светильник REDMOND SkyKettle G203S
@@ -128,8 +148,13 @@
                 </clipPath>
                 </defs>                          
               </svg>
-            .blured-container(js-lazy)
-              img#5.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
+            .blured-container()
+              <picture (js-lazy)>
+                <source media="(min-width:768px)" srcset="/img/catalog-bg.png">
+                <source media="(max-width:768px)" srcset="/img/catalog-frame-1.png">
+                <img id="5" class="catalog-img-primary" data-src="/img/catalog-bg.png" alt="Agave image 1">
+              </picture>
+              //-img#5.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
             img.lazy.catalog-img-secondary( alt="", data-src="/img/catalog-frame-4.png")
             .catalog__link-info 
               h2.catalog__link-title.secondary-title-h3 Умный чайник-светильник REDMOND SkyKettle G203S
@@ -154,8 +179,13 @@
                 </clipPath>
                 </defs>                          
               </svg>
-            .blured-container(js-lazy)
-              img#6.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
+            .blured-container()
+              <picture (js-lazy)>
+                <source media="(min-width:768px)" srcset="/img/catalog-bg.png">
+                <source media="(max-width:768px)" srcset="/img/catalog-frame-1.png">
+                <img id="6" class="catalog-img-primary" data-src="/img/catalog-bg.png" alt="Agave image 1">
+              </picture>
+              //-img#6.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
             img.lazy.catalog-img-secondary( alt="", data-src="/img/catalog-frame-1.png")
             .catalog__link-info 
               h2.catalog__link-title.secondary-title-h3 Умный чайник-светильник REDMOND SkyKettle G203S
@@ -180,8 +210,13 @@
                 </clipPath>
                 </defs>                          
               </svg>
-            .blured-container(js-lazy)
-              img#7.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
+            .blured-container()
+              <picture (js-lazy)>
+                <source media="(min-width:768px)" srcset="/img/catalog-bg.png">
+                <source media="(max-width:768px)" srcset="/img/catalog-frame-1.png">
+                <img id="7" class="catalog-img-primary" data-src="/img/catalog-bg.png" alt="Agave image 1">
+              </picture>
+              //-img#7.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
             img.lazy.catalog-img-secondary( alt="", data-src="/img/catalog-frame-1.png")
             .catalog__link-info 
               h2.catalog__link-title.secondary-title-h3 Умный чайник-светильник REDMOND SkyKettle G203S
@@ -206,8 +241,13 @@
                 </clipPath>
                 </defs>                          
               </svg>
-            .blured-container(js-lazy)
-              img#7.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
+            .blured-container()
+              <picture (js-lazy)>
+                <source media="(min-width:768px)" srcset="/img/catalog-bg.png">
+                <source media="(max-width:768px)" srcset="/img/catalog-frame-1.png">
+                <img id="8" class="catalog-img-primary" data-src="/img/catalog-bg.png" alt="Agave image 1">
+              </picture>
+              //-img#7.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
             img.lazy.catalog-img-secondary( alt="", data-src="/img/catalog-frame-1.png")
             .catalog__link-info 
               h2.catalog__link-title.secondary-title-h3 Умный чайник-светильник REDMOND SkyKettle G203S
@@ -232,8 +272,13 @@
                 </clipPath>
                 </defs>                          
               </svg>
-            .blured-container(js-lazy)
-              img#7.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
+            .blured-container()
+              <picture (js-lazy)>
+                <source media="(min-width:768px)" srcset="/img/catalog-bg.png">
+                <source media="(max-width:768px)" srcset="/img/catalog-frame-1.png">
+                <img id="9" class="catalog-img-primary" data-src="/img/catalog-bg.png" alt="Agave image 1">
+              </picture>
+              //-img#7.catalog-img-primary(data-src="/img/catalog-bg.png" alt="", loading="lazy")
             img.lazy.catalog-img-secondary( alt="", data-src="/img/catalog-frame-1.png")
             .catalog__link-info 
               h2.catalog__link-title.secondary-title-h3 Умный чайник-светильник REDMOND SkyKettle G203S
